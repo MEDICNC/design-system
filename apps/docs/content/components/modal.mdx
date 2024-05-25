@@ -1,0 +1,55 @@
+---
+componentName: Modal
+title: Modal
+date: 2024-05-23
+published: true
+---
+
+<Preview>
+  <button type="button" className="btn btn-primary" uk-toggle="target: #my-id">토글 버튼</button>
+  <div id="my-id" uk-modal="true">
+    <div className="uk-modal-dialog">
+        <div className="uk-modal-header">
+            <p className="uk-modal-title">
+                모달 타이틀
+            </p>
+        </div>
+        <div className="uk-modal-body">
+            모달 바디
+        </div>
+        <div className="uk-modal-footer">
+            <button className="btn btn-tonal btn-dark">취소</button>
+            <button className="btn btn-primary btn-lg">확인</button>
+        </div>
+      <button className="uk-modal-close btn-icon" type="button">
+          <i uk-icon="icon: close-200; ratio:1.33334" className="text-subtle"></i>
+      </button>
+    </div>
+  </div>
+</Preview>
+
+```jsx
+<button type="button" className="btn btn-primary" uk-toggle="target: #my-id">토글 버튼</button>
+  <div id="my-id" uk-modal="true">
+    <div className="uk-modal-dialog">
+        <div className="uk-modal-header">
+            <p className="uk-modal-title">
+                모달 타이틀
+            </p>
+        </div>
+        <div className="uk-modal-body">
+            모달 바디
+        </div>
+        <div className="uk-modal-footer">
+            <button className="btn btn-tonal btn-dark">취소</button>
+            <button className="btn btn-primary btn-lg">확인</button>
+        </div>
+      <button className="uk-modal-close btn-icon" type="button">
+          <i uk-icon="icon: close-200; ratio:1.33334" className="text-subtle"></i>
+      </button>
+    </div>
+  </div>
+```
+
+# UX Rule
+모달 backdrop 영역 클릭시 닫기 안되게

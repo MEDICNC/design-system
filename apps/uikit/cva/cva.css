@@ -1,0 +1,178 @@
+/* dist/css/cva.css */
+.btn {
+  display: inline-flex;
+  padding: var(--spacing-xxs, 6px) var(--spacing-sm, 12px);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.42px;
+  white-space: nowrap;
+  border-radius: var(--radius-md, 4px);
+  font-family: var(--font-family-font-family-headline, SUIT), sans-serif;
+}
+.btn.btn-xxl {
+  gap: 12px;
+  height: 64px;
+  padding: var(--spacing-md, 16px) var(--spacing-xl, 24px);
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.72px;
+}
+.btn.btn-xl {
+  gap: 12px;
+  height: 52px;
+  padding: var(--num-12, 12px) var(--num-24, 24px);
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.6px;
+}
+.btn.btn-lg {
+  gap: 8px;
+  height: 40px;
+  padding: var(--spacing-xs, 8px) var(--spacing-sm, 12px);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+.btn.btn-md {
+  gap: 8px;
+  height: 32px;
+  padding: var(--spacing-xxs, 6px) var(--spacing-sm, 12px);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.42px;
+}
+.btn.btn-sm {
+  gap: 6px;
+  height: 24px;
+  padding: var(--spacing-xxxs, 4px) var(--spacing-xs, 8px);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.36px;
+}
+.btn.btn-xs {
+  gap: 6px;
+  height: 20px;
+  padding: var(--spacing-xxxxs, 2px) var(--spacing-xxs, 6px);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.36px;
+}
+.btn.btn-xxl .btn-svg,
+.btn.btn-xl .btn-svg,
+.btn btn-lg .btn-svg {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.btn.btn-md .btn-svg,
+.btn.btn-sm .btn-svg,
+.btn.btn-xs .btn-svg {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.btn-primary path,
+.btn-secondary path,
+.btn-dark path,
+.btn-essential path,
+.btn-success path,
+.btn-primary rect,
+.btn-secondary rect,
+.btn-dark rect,
+.btn-essential rect,
+.btn-success rect {
+  fill: white;
+}
+.btn-light path,
+.btn-light rect {
+  color: var(--text-default, #000);
+}
+.btn.btn-fill {
+  background: var(--button-primary-background-fill-enabled, #2194f3);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-primary {
+  background: var(--button-primary-background-fill-enabled, #2194f3);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-secondary {
+  background: var(--button-secondary-background-fill-enabled, #848f99);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-dark {
+  background: var(--button-dark-background-fill-enabled, #2f3337);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-tonal {
+  background: var(--button-primary-background-tonal-enabled, rgba(33, 148, 243, 0.06));
+  color: var(--text-primary, #2194f3);
+}
+.btn.btn-fill.btn-outline {
+  border: 1px solid var(--button-primary-border-enabled, #2194f3);
+  background: var(--button-default, #fff);
+  color: var(--text-primary, #2194f3);
+}
+.btn.btn-fill.btn-essential {
+  background: var(--button-essential-background-fill-hover, #FF383C);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-outline {
+  color: var(--text-inverse, #fff);
+  background: var(--button-success-background-fill-enabled, #00A7A7);
+}
+.btn-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md, 4px);
+}
+.btn-icon.btn-xxl {
+  width: 64px;
+  height: 64px;
+}
+.btn-icon.btn-xl {
+  width: 52px;
+  height: 52px;
+}
+.btn-icon.btn-lg {
+  width: 40px;
+  height: 40px;
+}
+.btn-icon.btn-md {
+  width: 32px;
+  height: 32px;
+}
+.btn-icon.btn-sm {
+  width: 24px;
+  height: 24px;
+}
+.btn-icon.btn-xs {
+  width: 20px;
+  height: 20px;
+}
+.btn-icon.btn-primary {
+  background: var(--button-primary-background-fill-enabled, #2194f3);
+  color: var(--text-inverse, #fff);
+}
+.btn-icon.btn-secondary {
+  background: var(--button-secondary-background-fill-enabled, #848f99);
+  color: var(--text-inverse, #fff);
+}
+.btn-icon.btn-dark {
+  background: var(--button-dark-background-fill-enabled, #2f3337);
+  color: var(--text-inverse, #fff);
+}
+.btn-icon.btn-tonal {
+  background: var(--button-primary-background-tonal-enabled, rgba(33, 148, 243, 0.06));
+  color: var(--text-primary, #2194f3);
+}
+.btn-icon.btn-outline {
+  border: 1px solid var(--button-primary-border-enabled, #2194f3);
+  background: var(--button-default, #fff);
+  color: var(--text-primary, #2194f3);
+}
+/*! UIkit 3.21.3 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
