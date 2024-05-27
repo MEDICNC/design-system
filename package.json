@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "client",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:docs": "pnpm --filter \"docs\" dev",
+    "compile": "pnpm --filter \"uikit\" compile",
+    "compile-js": "pnpm --filter \"uikit\" compile-js",
+    "compile-less": "pnpm --filter \"uikit\" compile-less",
+    "build-scss": "pnpm --filter \"uikit\" build-scss",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "watch": "pnpm --filter \"uikit\" watch",
+    "watch-js": "pnpm --filter \"uikit\" watch:js",
+    "icons": "pnpm --filter \"uikit\" icons"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
