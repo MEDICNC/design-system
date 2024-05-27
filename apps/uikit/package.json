@@ -16,6 +16,7 @@
         "compile-js": "node build/build",
         "compile-less": " node build/less",
         "compile-rtl": "pnpm compile-less rtl",
+        "compile-cva": "node build/cva.js",
         "icons": "node build/icons",
         "prefix": "node build/prefix",
         "scope": "node build/scope",

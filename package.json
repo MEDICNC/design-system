@@ -9,6 +9,7 @@
     "compile": "pnpm --filter \"uikit\" compile",
     "compile-js": "pnpm --filter \"uikit\" compile-js",
     "compile-less": "pnpm --filter \"uikit\" compile-less",
+    "compile-cva": "pnpm --filter \"uikit\" compile-cva",
     "build-scss": "pnpm --filter \"uikit\" build-scss",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
