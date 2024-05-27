@@ -4,7 +4,7 @@ import { Preview } from "./preview";
 import {Button} from "react-uikit/button";
 import CodeTabs from "@/components/CodeTabs";
 import {TabsContent} from "react-uikit/tabs";
-import Dialog from "@/components/dialog";
+import {Confirm, Alert} from "@/components/dialog";
 
 
 const useMDXComponent = (code: string) => {
@@ -18,7 +18,8 @@ const components = {
     Preview,
     CodeTabs,
     TabsContent,
-    Dialog
+    Confirm,
+    Alert
 };
 
 interface MdxProps {

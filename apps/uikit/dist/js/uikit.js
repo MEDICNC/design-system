@@ -8492,15 +8492,15 @@
         );
         return dialog;
       };
-      modal.alert = function(message, options) {
+      modal.alert = function(options) {
         return openDialog(
-          ({ i18n }) => `<div class="uk-modal-body">${isString(message) ? message : html(message)}</div> <div class="uk-modal-footer uk-text-right"> <button class="uk-button uk-button-primary uk-modal-close" autofocus>${i18n.ok}</button> </div>`,
+          ({ i18n }) => `<div class="uk-dialog-body"> <p class="uk-dialog-title">${(options == null ? void 0 : options.title) || ""}</p> <p class="uk-dialog-text">${typeof options === "string" ? html(options) || "" : (options == null ? void 0 : options.text) || ""}</p> </div> <div class="uk-dialog-footer"> <button class="btn btn-fill btn-primary btn-lg uk-modal-close" autofocus>${(options == null ? void 0 : options.confirmButtonText) || i18n.ok}</button> </div>`,
           options
         );
       };
-      modal.confirm = function(message, options) {
+      modal.confirm = function(options) {
         return openDialog(
-          ({ i18n }) => `<form> <div class="uk-modal-body">${isString(message) ? message : html(message)}</div> <div class="uk-modal-footer uk-text-right"> <button class="uk-button uk-button-default uk-modal-close" type="button">${i18n.cancel}</button> <button class="uk-button uk-button-primary" autofocus>${i18n.ok}</button> </div> </form>`,
+          ({ i18n }) => `<form> <div class="uk-dialog-body"> <p class="uk-dialog-title">${options == null ? void 0 : options.title}</p> <p class="uk-dialog-text">${isObject(options) ? (options == null ? void 0 : options.text) || "" : html(options) || ""}</p> </div> <div class="uk-dialog-footer"> <button class="btn btn-tonal btn-dark btn-lg uk-modal-close">${(options == null ? void 0 : options.cancelButtonText) || i18n.cancel}</button> <button class="btn btn-fill btn-primary btn-lg" autofocus>${(options == null ? void 0 : options.confirmButtonText) || i18n.ok}</button> </div> </form>`,
           options,
           () => Promise.reject()
         );
@@ -8519,8 +8519,8 @@
         return promise;
       };
       modal.i18n = {
-        ok: "Ok",
-        cancel: "Cancel"
+        ok: "\uD655\uC778",
+        cancel: "\uCDE8\uC18C"
       };
       function openDialog(tmpl, options, hideFn = noop, submitFn = noop) {
         options = {

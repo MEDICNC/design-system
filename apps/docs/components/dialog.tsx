@@ -1,18 +1,30 @@
 'use client'
 
-const Dialog = () => {
+export const Confirm = () => {
     const handleClick =()=> {
-        UIkit.modal.confirm('UIkit confirm!').then(function() {
-            console.log('Confirmed.')
+        UIkit.modal.confirm({title: '제목', text:'Confirm 입니다.', confirmButtonText:'적용', cancelButtonText:'닫기'}).then(function() {
+            console.log('확인 클릭')
         }, function () {
-            console.log('Rejected.')
+            console.log('닫기 클릭')
         });
     }
     return (
         <div>
-            <button onClick={handleClick}>클릭</button>
+            <button className="btn btn-fill btn-primary" onClick={handleClick}>Confirm</button>
         </div>
     );
 };
 
-export default Dialog;
+export const Alert = () => {
+    const handleClick =()=> {
+        UIkit.modal.alert({text: 'Alert 입니다.'}).then(function() {
+            console.log('확인 클릭')
+        });
+    }
+    return (
+        <div>
+            <button className="btn btn-fill btn-primary" onClick={handleClick}>Alert</button>
+        </div>
+    );
+};
+

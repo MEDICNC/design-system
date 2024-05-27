@@ -5,7 +5,7 @@ import {
     css,
     hasClass,
     height,
-    html,
+    html, isObject,
     isString,
     isTag,
     noop,
@@ -91,29 +91,31 @@ function install({ modal }) {
         return dialog;
     };
 
-    modal.alert = function (message, options) {
+    modal.alert = function (options) {
         return openDialog(
-            ({ i18n }) => `<div class="uk-modal-body">${
-                isString(message) ? message : html(message)
-            }</div>
-            <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-primary uk-modal-close" autofocus>${
-                    i18n.ok
-                }</button>
-            </div>`,
+            ({ i18n }) => `<div class="uk-dialog-body">
+                    <p class="uk-dialog-title">${options?.title || ''}</p>
+                    <p class="uk-dialog-text">${typeof options ==='string' ? html(options) ||'' : options?.text ||''}</p>
+                </div>
+                <div class="uk-dialog-footer">
+                    <button class="btn btn-fill btn-primary btn-lg uk-modal-close" autofocus>${options?.confirmButtonText || i18n.ok}</button>
+                </div>`,
             options,
         );
     };
 
-    modal.confirm = function (message, options) {
+    modal.confirm = function (options) {
         return openDialog(
             ({ i18n }) => `<form>
-                <div class="uk-modal-body">${isString(message) ? message : html(message)}</div>
-                <div class="uk-modal-footer uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close" type="button">${
-                        i18n.cancel
+                <div class="uk-dialog-body">
+                    <p class="uk-dialog-title">${options?.title}</p>
+                    <p class="uk-dialog-text">${isObject(options) ? options?.text || '' : html(options) || ''}</p>
+                </div>
+                <div class="uk-dialog-footer">
+                    <button class="btn btn-tonal btn-dark btn-lg uk-modal-close">${
+                        options?.cancelButtonText || i18n.cancel
                     }</button>
-                    <button class="uk-button uk-button-primary" autofocus>${i18n.ok}</button>
+                    <button class="btn btn-fill btn-primary btn-lg" autofocus>${options?.confirmButtonText || i18n.ok}</button>
                 </div>
             </form>`,
             options,
@@ -149,8 +151,8 @@ function install({ modal }) {
     };
 
     modal.i18n = {
-        ok: 'Ok',
-        cancel: 'Cancel',
+        ok: '확인',
+        cancel: '취소',
     };
 
     function openDialog(tmpl, options, hideFn = noop, submitFn = noop) {

@@ -51,7 +51,6 @@ export default async function RootLayout({
           href="https://webfontworld.github.io/sunn/SUIT.css"
           rel="stylesheet"
         />
-        <Script>{scriptFile}</Script>
         <Script>{iconScriptFile}</Script>
       </head>
       <body className={cn("min-h-screen bg-background")}>
@@ -69,12 +68,14 @@ export default async function RootLayout({
                     ))}
                   </div>
                 </aside>
-                <main className="w-[80%]">{children}</main>
+                <main className="w-[80%] mb-20">{children}</main>
               </div>
             </div>
             <SiteFooter />
           </div>
         </Providers>
+
+        <Script>{scriptFile}</Script>
       </body>
     </html>
   );

@@ -5,4 +5,38 @@ date: 2024-05-25
 published: true
 ---
 
-<Dialog></Dialog>
+# Confirm
+
+<Preview>
+    <Confirm />
+</Preview>
+
+```jsx
+UIkit.modal
+  .confirm({
+    title: "제목",
+    text: "Confirm 입니다.",
+    confirmButtonText: "적용",
+    cancelButtonText: "닫기",
+  })
+  .then(
+    function () {
+      console.log("확인 클릭");
+    },
+    function () {
+      console.log("닫기 클릭");
+    },
+  );
+```
+
+# Alert
+
+<Preview>
+    <Alert />
+</Preview>
+
+```jsx
+UIkit.modal.alert({ text: "Alert 입니다." }).then(function () {
+  console.log("확인 클릭");
+});
+```

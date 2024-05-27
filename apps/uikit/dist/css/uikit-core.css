@@ -1106,7 +1106,7 @@ template {
   /* 2 */
   box-sizing: border-box;
   margin: 0 auto;
-  min-width: 400px;
+  min-width: 280px;
   /* 3 */
   max-width: 100% !important;
   /* 4 */
@@ -1235,6 +1235,32 @@ template {
 /*
  * Full
  */
+.uk-dialog-body {
+  padding: 32px 16px 0;
+  text-align: center;
+}
+.uk-dialog-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px 32px;
+  text-align: center;
+}
+.uk-dialog-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+.uk-dialog-text {
+  margin-top: 4px;
+  line-height: 20px;
+  letter-spacing: -0.42px;
+}
+.uk-dialog-footer .uk-modal-close {
+  position: static;
+}
 /* ========================================================================
    Component: Switcher
  ========================================================================== */
