@@ -849,6 +849,9 @@ template {
   background: var(--button-default, #fff);
   color: var(--text-primary, #2194f3);
 }
+.cache-check {
+  background: red;
+}
 .uk-modal {
   /* 1 */
   display: none;
@@ -1089,7 +1092,6 @@ template {
  * 2. Gutter
  * 3. Create position context for dropdowns
  */
-
 .uk-tab > * {
   /* 1 */
   flex: none;
@@ -1121,10 +1123,9 @@ template {
 }
 /* Hover */
 .uk-tab > * > a:hover {
-  color: blue;
+  color: red;
   text-decoration: none;
 }
-
 /* Active */
 .uk-tab > .uk-active > a {
   color: green;
