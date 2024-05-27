@@ -1,6 +1,6 @@
 /*! UIkit 3.21.3 | https://www.getuikit.com | (c) 2014 - 2024 YOOtheme | MIT License */
 /* @meta path="button" */
-/* @dv variant="fill" color="primary" size="md" */
+/* @dv variant="basic" color="primary" size="md" */
 .btn {
   /* @b */
   display: inline-flex;
@@ -108,7 +108,7 @@
   background: var(--button-primary-background-fill-enabled, #2194f3);
   color: var(--text-inverse, #fff);
 }
-.btn.btn-primary:hover {
+.btn.btn-primary:not(.btn-outline,.btn-link):hover {
   background: var(--button-primary-background-fill-hover, #1764C0);
 }
 .btn.btn-fill {
@@ -242,7 +242,6 @@
 }
 .btn.btn-outline.btn-primary:hover {
   border: 1px solid var(--button-primary-border-hover, #1764C0);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-secondary {
   /* @v color="secondary" */
@@ -251,7 +250,6 @@
 }
 .btn.btn-outline.btn-secondary:hover {
   border: 1px solid var(--button-secondary-border-hover, #43494E);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-dark {
   /* @v color="dark" */
@@ -260,7 +258,6 @@
 }
 .btn.btn-outline.btn-dark:hover {
   border: 1px solid var(--button-dark-border-hover, #000);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-light {
   /* @v color="light" */
@@ -269,7 +266,6 @@
 }
 .btn.btn-outline.btn-light:hover {
   border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-essential {
   /* @v color="essential" */
@@ -278,7 +274,6 @@
 }
 .btn.btn-outline.btn-essential:hover {
   border: 1px solid var(--button-essential-border-hover, #FF383C);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-success {
   /* @v color="success" */
@@ -287,7 +282,6 @@
 }
 .btn.btn-outline.btn-success:hover {
   border: 1px solid var(--button-success-border-hover, #008A87);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-disabled {
   /* @v color="disabled" */
@@ -378,9 +372,6 @@
 .btn.btn-link.btn-success {
   /* @v color="success" */
   color: var(--text-success, #00A7A7);
-}
-.btn.btn-link:hover {
-  background: var(--button-default, #FFF);
 }
 .btn.btn-link.btn-disabled {
   /* @v color="disabled" */

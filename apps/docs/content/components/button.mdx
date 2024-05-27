@@ -1,233 +1,349 @@
 ---
 componentName: Button
 title: Button
-date: 2024-02-26
+date: 2024-05-27
 published: true
 ---
 
 # variant
 
-
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-fill btn-primary">버튼 fill</button>
-        <button className="btn btn-tonal btn-primary">버튼 tonal</button>
-        <button className="btn btn-outline btn-primary">버튼 outline</button>
-        <button className="btn btn-text btn-primary">버튼 text</button>
-        <button className="btn btn-link btn-primary"><span className="btn-label">버튼 link</span></button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-fill btn-primary">버튼 fill</button>
+    <button className="btn btn-tonal btn-primary">버튼 tonal</button>
+    <button className="btn btn-outline btn-primary">버튼 outline</button>
+    <button className="btn btn-text btn-primary">버튼 text</button>
+    <button className="btn btn-link btn-primary">
+      <span className="btn-label">버튼 link</span>
+    </button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-fill btn-primary">버튼 fill</button>
-            <button class="btn btn-tonal btn-primary">버튼 tonal</button>
-            <button class="btn btn-outline btn-primary">버튼 outline</button>
-            <button class="btn btn-text btn-primary">버튼 text</button>
-            <button class="btn btn-link btn-primary"><span class="btn-label">버튼 link</span></button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="fill" color="primary">버튼 fill</Button>
-            <Button variant="tonal" color="primary">버튼 tonal</Button>
-            <Button variant="outline" color="primary">버튼 outline</Button>
-            <Button variant="text" color="primary">버튼 text</Button>
-            <Button variant="link" color="primary"><span className="btn-label">버튼 link</span></Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-fill btn-primary">버튼 fill</button>
+    <button class="btn btn-tonal btn-primary">버튼 tonal</button>
+    <button class="btn btn-outline btn-primary">버튼 outline</button>
+    <button class="btn btn-text btn-primary">버튼 text</button>
+    <button class="btn btn-link btn-primary">
+      <span class="btn-label">버튼 link</span>
+    </button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="fill" color="primary">
+      버튼 fill
+    </Button>
+    <Button variant="tonal" color="primary">
+      버튼 tonal
+    </Button>
+    <Button variant="outline" color="primary">
+      버튼 outline
+    </Button>
+    <Button variant="text" color="primary">
+      버튼 text
+    </Button>
+    <Button variant="link" color="primary">
+      <span className="btn-label">버튼 link</span>
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
-<br/>
+<br />
 
 # color
 
 ## Fill
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-fill btn-primary">버튼 primary</button>
-        <button className="btn btn-fill btn-secondary">버튼 secondary</button>
-        <button className="btn btn-fill btn-dark">버튼 dark</button>
-        <button className="btn btn-fill btn-light">버튼 light</button>
-        <button className="btn btn-fill btn-essential">버튼 essential</button>
-        <button className="btn btn-fill btn-success">버튼 success</button>
-        <button className="btn btn-fill btn-disabled">버튼 disabled</button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-fill btn-primary">버튼 primary</button>
+    <button className="btn btn-fill btn-secondary">버튼 secondary</button>
+    <button className="btn btn-fill btn-dark">버튼 dark</button>
+    <button className="btn btn-fill btn-light">버튼 light</button>
+    <button className="btn btn-fill btn-essential">버튼 essential</button>
+    <button className="btn btn-fill btn-success">버튼 success</button>
+    <button className="btn btn-fill btn-disabled">버튼 disabled</button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-fill btn-primary">버튼 primary</button>
-            <button class="btn btn-fill btn-secondary">버튼 secondary</button>
-            <button class="btn btn-fill btn-dark">버튼 dark</button>
-            <button class="btn btn-fill btn-light">버튼 light</button>
-            <button class="btn btn-fill btn-essential">버튼 essential</button>
-            <button class="btn btn-fill btn-success">버튼 success</button>
-            <button class="btn btn-fill btn-disabled">버튼 disabled</button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="fill" color="primary">버튼 primary</Button>
-            <Button variant="fill" color="secondary">버튼 secondary</Button>
-            <Button variant="fill" color="dark">버튼 dark</Button>
-            <Button variant="fill" color="light">버튼 light</Button>
-            <Button variant="fill" color="essential">버튼 essential</Button>
-            <Button variant="fill" color="success">버튼 success</Button>
-            <Button variant="fill" color="disabled">버튼 disabled</Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-fill btn-primary">버튼 primary</button>
+    <button class="btn btn-fill btn-secondary">버튼 secondary</button>
+    <button class="btn btn-fill btn-dark">버튼 dark</button>
+    <button class="btn btn-fill btn-light">버튼 light</button>
+    <button class="btn btn-fill btn-essential">버튼 essential</button>
+    <button class="btn btn-fill btn-success">버튼 success</button>
+    <button class="btn btn-fill btn-disabled">버튼 disabled</button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="fill" color="primary">
+      버튼 primary
+    </Button>
+    <Button variant="fill" color="secondary">
+      버튼 secondary
+    </Button>
+    <Button variant="fill" color="dark">
+      버튼 dark
+    </Button>
+    <Button variant="fill" color="light">
+      버튼 light
+    </Button>
+    <Button variant="fill" color="essential">
+      버튼 essential
+    </Button>
+    <Button variant="fill" color="success">
+      버튼 success
+    </Button>
+    <Button variant="fill" color="disabled">
+      버튼 disabled
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
 ## Tonal
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-tonal btn-primary">버튼 primary</button>
-        <button className="btn btn-tonal btn-secondary">버튼 secondary</button>
-        <button className="btn btn-tonal btn-dark">버튼 dark</button>
-        <button className="btn btn-tonal btn-light">버튼 light</button>
-        <button className="btn btn-tonal btn-essential">버튼 essential</button>
-        <button className="btn btn-tonal btn-success">버튼 success</button>
-        <button className="btn btn-tonal btn-disabled">버튼 disabled</button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-tonal btn-primary">버튼 primary</button>
+    <button className="btn btn-tonal btn-secondary">버튼 secondary</button>
+    <button className="btn btn-tonal btn-dark">버튼 dark</button>
+    <button className="btn btn-tonal btn-light">버튼 light</button>
+    <button className="btn btn-tonal btn-essential">버튼 essential</button>
+    <button className="btn btn-tonal btn-success">버튼 success</button>
+    <button className="btn btn-tonal btn-disabled">버튼 disabled</button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-tonal btn-primary">버튼 primary</button>
-            <button class="btn btn-tonal btn-secondary">버튼 secondary</button>
-            <button class="btn btn-tonal btn-dark">버튼 dark</button>
-            <button class="btn btn-tonal btn-light">버튼 light</button>
-            <button class="btn btn-tonal btn-essential">버튼 essential</button>
-            <button class="btn btn-tonal btn-success">버튼 success</button>
-            <button class="btn btn-tonal btn-disabled">버튼 disabled</button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="tonal" color="primary">버튼 primary</Button>
-            <Button variant="tonal" color="secondary">버튼 secondary</Button>
-            <Button variant="tonal" color="dark">버튼 dark</Button>
-            <Button variant="tonal" color="light">버튼 light</Button>
-            <Button variant="tonal" color="essential">버튼 essential</Button>
-            <Button variant="tonal" color="success">버튼 success</Button>
-            <Button variant="tonal" color="disabled">버튼 disabled</Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-tonal btn-primary">버튼 primary</button>
+    <button class="btn btn-tonal btn-secondary">버튼 secondary</button>
+    <button class="btn btn-tonal btn-dark">버튼 dark</button>
+    <button class="btn btn-tonal btn-light">버튼 light</button>
+    <button class="btn btn-tonal btn-essential">버튼 essential</button>
+    <button class="btn btn-tonal btn-success">버튼 success</button>
+    <button class="btn btn-tonal btn-disabled">버튼 disabled</button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="tonal" color="primary">
+      버튼 primary
+    </Button>
+    <Button variant="tonal" color="secondary">
+      버튼 secondary
+    </Button>
+    <Button variant="tonal" color="dark">
+      버튼 dark
+    </Button>
+    <Button variant="tonal" color="light">
+      버튼 light
+    </Button>
+    <Button variant="tonal" color="essential">
+      버튼 essential
+    </Button>
+    <Button variant="tonal" color="success">
+      버튼 success
+    </Button>
+    <Button variant="tonal" color="disabled">
+      버튼 disabled
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
 ## Outline
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-outline btn-primary">버튼 primary</button>
-        <button className="btn btn-outline btn-secondary">버튼 secondary</button>
-        <button className="btn btn-outline btn-dark">버튼 dark</button>
-        <button className="btn btn-outline btn-light">버튼 light</button>
-        <button className="btn btn-outline btn-essential">버튼 essential</button>
-        <button className="btn btn-outline btn-success">버튼 success</button>
-        <button className="btn btn-outline btn-disabled">버튼 disabled</button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-outline btn-primary">버튼 primary</button>
+    <button className="btn btn-outline btn-secondary">버튼 secondary</button>
+    <button className="btn btn-outline btn-dark">버튼 dark</button>
+    <button className="btn btn-outline btn-light">버튼 light</button>
+    <button className="btn btn-outline btn-essential">버튼 essential</button>
+    <button className="btn btn-outline btn-success">버튼 success</button>
+    <button className="btn btn-outline btn-disabled">버튼 disabled</button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-outline btn-primary">버튼 primary</button>
-            <button class="btn btn-outline btn-secondary">버튼 secondary</button>
-            <button class="btn btn-outline btn-dark">버튼 dark</button>
-            <button class="btn btn-outline btn-light">버튼 light</button>
-            <button class="btn btn-outline btn-essential">버튼 essential</button>
-            <button class="btn btn-outline btn-success">버튼 success</button>
-            <button class="btn btn-outline btn-disabled">버튼 disabled</button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="outline" color="primary">버튼 primary</Button>
-            <Button variant="outline" color="secondary">버튼 secondary</Button>
-            <Button variant="outline" color="dark">버튼 dark</Button>
-            <Button variant="outline" color="light">버튼 light</Button>
-            <Button variant="outline" color="essential">버튼 essential</Button>
-            <Button variant="outline" color="success">버튼 success</Button>
-            <Button variant="outline" color="disabled">버튼 disabled</Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-outline btn-primary">버튼 primary</button>
+    <button class="btn btn-outline btn-secondary">버튼 secondary</button>
+    <button class="btn btn-outline btn-dark">버튼 dark</button>
+    <button class="btn btn-outline btn-light">버튼 light</button>
+    <button class="btn btn-outline btn-essential">버튼 essential</button>
+    <button class="btn btn-outline btn-success">버튼 success</button>
+    <button class="btn btn-outline btn-disabled">버튼 disabled</button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="outline" color="primary">
+      버튼 primary
+    </Button>
+    <Button variant="outline" color="secondary">
+      버튼 secondary
+    </Button>
+    <Button variant="outline" color="dark">
+      버튼 dark
+    </Button>
+    <Button variant="outline" color="light">
+      버튼 light
+    </Button>
+    <Button variant="outline" color="essential">
+      버튼 essential
+    </Button>
+    <Button variant="outline" color="success">
+      버튼 success
+    </Button>
+    <Button variant="outline" color="disabled">
+      버튼 disabled
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
 ## Text
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-text btn-primary">버튼 primary</button>
-        <button className="btn btn-text btn-secondary">버튼 secondary</button>
-        <button className="btn btn-text btn-dark">버튼 dark</button>
-        <button className="btn btn-text btn-light">버튼 light</button>
-        <button className="btn btn-text btn-essential">버튼 essential</button>
-        <button className="btn btn-text btn-success">버튼 success</button>
-        <button className="btn btn-text btn-disabled">버튼 disabled</button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-text btn-primary">버튼 primary</button>
+    <button className="btn btn-text btn-secondary">버튼 secondary</button>
+    <button className="btn btn-text btn-dark">버튼 dark</button>
+    <button className="btn btn-text btn-light">버튼 light</button>
+    <button className="btn btn-text btn-essential">버튼 essential</button>
+    <button className="btn btn-text btn-success">버튼 success</button>
+    <button className="btn btn-text btn-disabled">버튼 disabled</button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-text btn-primary">버튼 primary</button>
-            <button class="btn btn-text btn-secondary">버튼 secondary</button>
-            <button class="btn btn-text btn-dark">버튼 dark</button>
-            <button class="btn btn-text btn-light">버튼 light</button>
-            <button class="btn btn-text btn-essential">버튼 essential</button>
-            <button class="btn btn-text btn-success">버튼 success</button>
-            <button class="btn btn-text btn-disabled">버튼 disabled</button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="text" color="primary">버튼 primary</Button>
-            <Button variant="text" color="secondary">버튼 secondary</Button>
-            <Button variant="text" color="dark">버튼 dark</Button>
-            <Button variant="text" color="light">버튼 light</Button>
-            <Button variant="text" color="essential">버튼 essential</Button>
-            <Button variant="text" color="success">버튼 success</Button>
-            <Button variant="text" color="disabled">버튼 disabled</Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-text btn-primary">버튼 primary</button>
+    <button class="btn btn-text btn-secondary">버튼 secondary</button>
+    <button class="btn btn-text btn-dark">버튼 dark</button>
+    <button class="btn btn-text btn-light">버튼 light</button>
+    <button class="btn btn-text btn-essential">버튼 essential</button>
+    <button class="btn btn-text btn-success">버튼 success</button>
+    <button class="btn btn-text btn-disabled">버튼 disabled</button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="text" color="primary">
+      버튼 primary
+    </Button>
+    <Button variant="text" color="secondary">
+      버튼 secondary
+    </Button>
+    <Button variant="text" color="dark">
+      버튼 dark
+    </Button>
+    <Button variant="text" color="light">
+      버튼 light
+    </Button>
+    <Button variant="text" color="essential">
+      버튼 essential
+    </Button>
+    <Button variant="text" color="success">
+      버튼 success
+    </Button>
+    <Button variant="text" color="disabled">
+      버튼 disabled
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
 ## Link
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-link btn-primary"><span className="btn-label">버튼 primary</span></button>
-        <button className="btn btn-link btn-secondary"><span className="btn-label">버튼 secondary</span></button>
-        <button className="btn btn-link btn-dark"><span className="btn-label">버튼 dark</span></button>
-        <button className="btn btn-link btn-light"><span className="btn-label">버튼 light</span></button>
-        <button className="btn btn-link btn-essential"><span className="btn-label">버튼 essential</span></button>
-        <button className="btn btn-link btn-success"><span className="btn-label">버튼 success</span></button>
-        <button className="btn btn-link btn-disabled"><span className="btn-label">버튼 disabled</span></button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-link btn-primary">
+      <span className="btn-label">버튼 primary</span>
+    </button>
+    <button className="btn btn-link btn-secondary">
+      <span className="btn-label">버튼 secondary</span>
+    </button>
+    <button className="btn btn-link btn-dark">
+      <span className="btn-label">버튼 dark</span>
+    </button>
+    <button className="btn btn-link btn-light">
+      <span className="btn-label">버튼 light</span>
+    </button>
+    <button className="btn btn-link btn-essential">
+      <span className="btn-label">버튼 essential</span>
+    </button>
+    <button className="btn btn-link btn-success">
+      <span className="btn-label">버튼 success</span>
+    </button>
+    <button className="btn btn-link btn-disabled">
+      <span className="btn-label">버튼 disabled</span>
+    </button>
+  </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-            <button class="btn btn-link btn-primary"><span class="btn-label">버튼 primary</span></button>
-            <button class="btn btn-link btn-secondary"><span class="btn-label">버튼 secondary</span></button>
-            <button class="btn btn-link btn-dark"><span class="btn-label">버튼 dark</span></button>
-            <button class="btn btn-link btn-light"><span class="btn-label">버튼 light</span></button>
-            <button class="btn btn-link btn-essential"><span class="btn-label">버튼 essential</span></button>
-            <button class="btn btn-link btn-success"><span class="btn-label">버튼 success</span></button>
-            <button class="btn btn-link btn-disabled"><span class="btn-label">버튼 disabled</span></button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="link" color="primary"><span className="btn-label">버튼 primary</span></Button>
-            <Button variant="link" color="secondary"><span className="btn-label">버튼 secondary</span></Button>
-            <Button variant="link" color="dark"><span className="btn-label">버튼 dark</span></Button>
-            <Button variant="link" color="light"><span className="btn-label">버튼 light</span></Button>
-            <Button variant="link" color="essential"><span className="btn-label">버튼 essential</span></Button>
-            <Button variant="link" color="success"><span className="btn-label">버튼 success</span></Button>
-            <Button variant="link" color="disabled"><span className="btn-label">버튼 disabled</span></Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-link btn-primary">
+      <span class="btn-label">버튼 primary</span>
+    </button>
+    <button class="btn btn-link btn-secondary">
+      <span class="btn-label">버튼 secondary</span>
+    </button>
+    <button class="btn btn-link btn-dark">
+      <span class="btn-label">버튼 dark</span>
+    </button>
+    <button class="btn btn-link btn-light">
+      <span class="btn-label">버튼 light</span>
+    </button>
+    <button class="btn btn-link btn-essential">
+      <span class="btn-label">버튼 essential</span>
+    </button>
+    <button class="btn btn-link btn-success">
+      <span class="btn-label">버튼 success</span>
+    </button>
+    <button class="btn btn-link btn-disabled">
+      <span class="btn-label">버튼 disabled</span>
+    </button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="link" color="primary">
+      <span className="btn-label">버튼 primary</span>
+    </Button>
+    <Button variant="link" color="secondary">
+      <span className="btn-label">버튼 secondary</span>
+    </Button>
+    <Button variant="link" color="dark">
+      <span className="btn-label">버튼 dark</span>
+    </Button>
+    <Button variant="link" color="light">
+      <span className="btn-label">버튼 light</span>
+    </Button>
+    <Button variant="link" color="essential">
+      <span className="btn-label">버튼 essential</span>
+    </Button>
+    <Button variant="link" color="success">
+      <span className="btn-label">버튼 success</span>
+    </Button>
+    <Button variant="link" color="disabled">
+      <span className="btn-label">버튼 disabled</span>
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
-<br/>
+<br />
 
 # Sizes
 
@@ -242,51 +358,65 @@ published: true
   </div>
 </Preview>
 <CodeTabs>
-    <TabsContent value="html">
-        ```jsx
-        <button class="btn btn-fill btn-primary btn-xxl">버튼 xxl</button>
-        <button class="btn btn-fill btn-primary btn-xl">버튼 xl</button>
-        <button class="btn btn-fill btn-primary btn-lg">버튼 lg</button>
-        <button class="btn btn-fill btn-primary btn-md">버튼 md</button>
-        <button class="btn btn-fill btn-primary btn-sm">버튼 sm</button>
-        <button class="btn btn-fill btn-primary btn-xs">버튼 xs</button>
-        ```
-    </TabsContent>
-    <TabsContent value="react">
-        ```jsx
-            <Button variant="fill" color="primary"><span className="btn-label">버튼 primary</span></Button>
-            <Button variant="fill" color="secondary"><span className="btn-label">버튼 secondary</span></Button>
-            <Button variant="fill" color="dark"><span className="btn-label">버튼 dark</span></Button>
-            <Button variant="fill" color="light"><span className="btn-label">버튼 light</span></Button>
-            <Button variant="fill" color="essential"><span className="btn-label">버튼 essential</span></Button>
-            <Button variant="fill" color="success"><span className="btn-label">버튼 success</span></Button>
-            <Button variant="fill" color="disabled"><span className="btn-label">버튼 disabled</span></Button>
-        ```
-    </TabsContent>
+  <TabsContent value="html">
+    ```jsx
+    <button class="btn btn-fill btn-primary btn-xxl">버튼 xxl</button>
+    <button class="btn btn-fill btn-primary btn-xl">버튼 xl</button>
+    <button class="btn btn-fill btn-primary btn-lg">버튼 lg</button>
+    <button class="btn btn-fill btn-primary btn-md">버튼 md</button>
+    <button class="btn btn-fill btn-primary btn-sm">버튼 sm</button>
+    <button class="btn btn-fill btn-primary btn-xs">버튼 xs</button>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+    <Button variant="fill" color="primary">
+      <span className="btn-label">버튼 primary</span>
+    </Button>
+    <Button variant="fill" color="secondary">
+      <span className="btn-label">버튼 secondary</span>
+    </Button>
+    <Button variant="fill" color="dark">
+      <span className="btn-label">버튼 dark</span>
+    </Button>
+    <Button variant="fill" color="light">
+      <span className="btn-label">버튼 light</span>
+    </Button>
+    <Button variant="fill" color="essential">
+      <span className="btn-label">버튼 essential</span>
+    </Button>
+    <Button variant="fill" color="success">
+      <span className="btn-label">버튼 success</span>
+    </Button>
+    <Button variant="fill" color="disabled">
+      <span className="btn-label">버튼 disabled</span>
+    </Button>
+    ```
+  </TabsContent>
 </CodeTabs>
 
-<br/>
+<br />
 
 # icon
 
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-fill btn-primary">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
-            </span>
-            <span className="btn-label">버튼 텍스트</span>
-        </button>
-        <button className="btn btn-fill btn-primary">
-            <span className="button-label">버튼 텍스트</span>
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
-            </span>
-        </button>
-        <button className="btn-icon btn-fill btn-primary">
-            <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
-        </button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-fill btn-primary">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+      <span className="btn-label">버튼 텍스트</span>
+    </button>
+    <button className="btn btn-fill btn-primary">
+      <span className="button-label">버튼 텍스트</span>
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </button>
+    <button className="btn-icon btn-fill btn-primary">
+      <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+    </button>
+  </div>
 </Preview>
 
 ```jsx
@@ -308,45 +438,46 @@ published: true
 ```
 
 ### 사이즈별 svg ratio 처리
+
 <Preview>
-    <div className="flex items-center gap-3">
-        <button className="btn btn-fill btn-primary btn-xxl">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 1.3334"></i>
-            </span>
-            <span className="btn-label">xxl - 1.3334</span>
-        </button>
-        <button className="btn btn-fill btn-primary btn-xl">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 1.1667;"></i>
-            </span>
-            <span className="btn-label">xl -  1.1667</span>
-        </button>
-        <button className="btn btn-fill btn-primary btn-lg">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 1;"></i>
-            </span>
-            <span className="btn-label">lg - 1</span>
-        </button>
-        <button className="btn btn-fill btn-primary btn-md">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 0.83334;"></i>
-            </span>
-            <span className="btn-label">md - 1</span>
-        </button>
-        <button className="btn btn-fill btn-primary btn-sm">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 0.6667;"></i>
-            </span>
-            <span className="btn-label">sm - 0.6667</span>
-        </button>
-        <button className="btn btn-fill btn-primary btn-xs">
-            <span className="btn-svg">
-                <i uk-icon="icon: photo-200; ratio: 0.6667;"></i>
-            </span>
-            <span className="btn-label">xs - 0.6667</span>
-        </button>
-    </div>
+  <div className="flex items-center gap-3">
+    <button className="btn btn-fill btn-primary btn-xxl">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 1.3334"></i>
+      </span>
+      <span className="btn-label">xxl - 1.3334</span>
+    </button>
+    <button className="btn btn-fill btn-primary btn-xl">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 1.1667;"></i>
+      </span>
+      <span className="btn-label">xl - 1.1667</span>
+    </button>
+    <button className="btn btn-fill btn-primary btn-lg">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 1;"></i>
+      </span>
+      <span className="btn-label">lg - 1</span>
+    </button>
+    <button className="btn btn-fill btn-primary btn-md">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.83334;"></i>
+      </span>
+      <span className="btn-label">md - 1</span>
+    </button>
+    <button className="btn btn-fill btn-primary btn-sm">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.6667;"></i>
+      </span>
+      <span className="btn-label">sm - 0.6667</span>
+    </button>
+    <button className="btn btn-fill btn-primary btn-xs">
+      <span className="btn-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.6667;"></i>
+      </span>
+      <span className="btn-label">xs - 0.6667</span>
+    </button>
+  </div>
 </Preview>
 
 ```jsx
@@ -389,6 +520,7 @@ published: true
 ```
 
 # 버튼 유의사항
+
 - default size : md
 - 아이콘은 레티나 환경 화질을 고려해 비율을 2배로 해야한다. (1.5배 나 2.5배 x -> 이미지 깨짐)
 

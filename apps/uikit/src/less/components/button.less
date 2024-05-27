@@ -1,5 +1,5 @@
 /* @meta path="button" */
-/* @dv variant="fill" color="primary" size="md" */
+/* @dv variant="basic" color="primary" size="md" */
 
 .btn {
   /* @b */
@@ -21,6 +21,7 @@
     margin-left: -4px;
     margin-right: -4px;
   }
+
   &.btn-xxl {
     /* @v size="xxl" */
     gap: 12px;
@@ -112,7 +113,7 @@
     /* @v color="primary" */
     background: var(--button-primary-background-fill-enabled, #2194f3);
     color: var(--text-inverse, #fff);
-    &:hover {
+    &:not(.btn-outline,.btn-link):hover {
       background: var(--button-primary-background-fill-hover, #1764C0);
     }
   }
@@ -267,7 +268,6 @@
       color: var(--text-primary, #2194F3);
       &:hover {
         border: 1px solid var(--button-primary-border-hover, #1764C0);
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -277,7 +277,6 @@
       color: var(--text-subtle, #6D767F);
       &:hover {
         border: 1px solid var(--button-secondary-border-hover, #43494E);
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -287,7 +286,6 @@
       color: var(--text-default, #000);
       &:hover {
         border: 1px solid var(--button-dark-border-hover, #000);
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -297,7 +295,6 @@
       color: var(--text-default, #000);
       &:hover {
         border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -307,7 +304,6 @@
       color: var(--text-essential, #F66);
       &:hover {
         border: 1px solid var(--button-essential-border-hover, #FF383C);
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -317,7 +313,6 @@
       color: var(--text-success, #00A7A7);
       &:hover {
         border: 1px solid var(--button-success-border-hover, #008A87);
-        background: var(--button-default, #FFF);
       }
     }
 
@@ -427,10 +422,6 @@
     &.btn-success {
       /* @v color="success" */
       color: var(--text-success, #00A7A7);
-    }
-
-    &:hover{
-      background: var(--button-default, #FFF);
     }
 
     &.btn-disabled {

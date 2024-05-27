@@ -846,8 +846,76 @@ template {
 .text-subtle {
   color: #6D767F;
 }
-/* @meta path="button" */
+/* @meta path="checkbox" */
 /* @dv variant="fill" color="primary" size="md" */
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--radus-xxxs, 4px);
+  color: var(--text-default, #000);
+  font-family: var(--font-family-font-family-body, SUIT);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.42px;
+}
+.checkbox-icon[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  appearance: none;
+}
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--radus-xxxs, 4px);
+  cursor: pointer;
+}
+.checkbox .checkbox-icon[type="checkbox"] + .checkbox-label::before {
+  content: '';
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M3.14999 7.19999C3.14999 4.54903 5.29903 2.39999 7.94999 2.39999H17.55C20.201 2.39999 22.35 4.54903 22.35 7.19999V16.8C22.35 19.451 20.201 21.6 17.55 21.6H7.94999C5.29903 21.6 3.14999 19.451 3.14999 16.8V7.19999Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.55 3.59999H7.94999C5.96177 3.59999 4.34999 5.21177 4.34999 7.19999V16.8C4.34999 18.7882 5.96177 20.4 7.94999 20.4H17.55C19.5382 20.4 21.15 18.7882 21.15 16.8V7.19999C21.15 5.21177 19.5382 3.59999 17.55 3.59999ZM7.94999 2.39999C5.29903 2.39999 3.14999 4.54903 3.14999 7.19999V16.8C3.14999 19.451 5.29903 21.6 7.94999 21.6H17.55C20.201 21.6 22.35 19.451 22.35 16.8V7.19999C22.35 4.54903 20.201 2.39999 17.55 2.39999H7.94999Z' fill='%2343494E' fill-opacity='0.24'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.checkbox .checkbox-icon[type="checkbox"]:checked + .checkbox-label::before {
+  content: '';
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cpath d='M3.14999 7.20002C3.14999 4.54906 5.29903 2.40002 7.94999 2.40002H17.55C20.201 2.40002 22.35 4.54906 22.35 7.20002V16.8C22.35 19.451 20.201 21.6 17.55 21.6H7.94999C5.29903 21.6 3.14999 19.451 3.14999 16.8V7.20002Z' fill='%232194F3'/%3E%3Cpath d='M11.4548 15.3807L7.96875 11.8946L9.17545 10.6879L11.4548 12.9673L16.362 8.06L17.5688 9.2667L11.4548 15.3807Z' fill='white'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+.checkbox.checkbox-lg {
+  /* @v size="lg" */
+  font-size: 16px;
+  line-height: 24px;
+  /* 150% */
+  letter-spacing: -0.48px;
+}
+.checkbox.checkbox-md {
+  /* @v size="md" */
+  font-size: 14px;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.42px;
+}
+.checkbox.checkbox-sm {
+  /* @v size="sm" */
+  font-size: 12px;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.36px;
+}
+/* @meta path="button" */
+/* @dv variant="basic" color="primary" size="md" */
 .btn {
   /* @b */
   display: inline-flex;
@@ -955,7 +1023,7 @@ template {
   background: var(--button-primary-background-fill-enabled, #2194f3);
   color: var(--text-inverse, #fff);
 }
-.btn.btn-primary:hover {
+.btn.btn-primary:not(.btn-outline,.btn-link):hover {
   background: var(--button-primary-background-fill-hover, #1764C0);
 }
 .btn.btn-fill {
@@ -1089,7 +1157,6 @@ template {
 }
 .btn.btn-outline.btn-primary:hover {
   border: 1px solid var(--button-primary-border-hover, #1764C0);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-secondary {
   /* @v color="secondary" */
@@ -1098,7 +1165,6 @@ template {
 }
 .btn.btn-outline.btn-secondary:hover {
   border: 1px solid var(--button-secondary-border-hover, #43494E);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-dark {
   /* @v color="dark" */
@@ -1107,7 +1173,6 @@ template {
 }
 .btn.btn-outline.btn-dark:hover {
   border: 1px solid var(--button-dark-border-hover, #000);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-light {
   /* @v color="light" */
@@ -1116,7 +1181,6 @@ template {
 }
 .btn.btn-outline.btn-light:hover {
   border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-essential {
   /* @v color="essential" */
@@ -1125,7 +1189,6 @@ template {
 }
 .btn.btn-outline.btn-essential:hover {
   border: 1px solid var(--button-essential-border-hover, #FF383C);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-success {
   /* @v color="success" */
@@ -1134,7 +1197,6 @@ template {
 }
 .btn.btn-outline.btn-success:hover {
   border: 1px solid var(--button-success-border-hover, #008A87);
-  background: var(--button-default, #FFF);
 }
 .btn.btn-outline.btn-disabled {
   /* @v color="disabled" */
@@ -1225,9 +1287,6 @@ template {
 .btn.btn-link.btn-success {
   /* @v color="success" */
   color: var(--text-success, #00A7A7);
-}
-.btn.btn-link:hover {
-  background: var(--button-default, #FFF);
 }
 .btn.btn-link.btn-disabled {
   /* @v color="disabled" */
@@ -1630,5 +1689,5 @@ template {
 }
 .preview p,
 .uk-modal-dialog p {
-  margin-bottom: 0 !important;
+  margin: 0 !important;
 }
