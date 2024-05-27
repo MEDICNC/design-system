@@ -11,16 +11,19 @@ export const variants = {
   },
   "variant": {
     "fill": ["btn-fill"],
+    "tonal": ["btn-tonal"],
+    "outline": ["btn-outline"],
+    "text": ["btn-text"],
+    "link": ["btn-link"],
     "primary": ["btn-primary"]
   },
   "color": {
     "primary": ["btn-primary"],
     "secondary": ["btn-secondary"],
     "dark": ["btn-dark"],
-    "light": ["btn-tonal"],
-    "outline": ["btn-outline"],
+    "light": ["btn-light"],
     "essential": ["btn-essential"],
-    "success": ["btn-outline"]
+    "success": ["btn-success"]
   }
 };
 export const compoundVariants = [];

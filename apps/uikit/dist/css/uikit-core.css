@@ -862,6 +862,11 @@ template {
   white-space: nowrap;
   border-radius: var(--radius-md, 4px);
   font-family: var(--font-family-font-family-headline, SUIT), sans-serif;
+  background: #123456;
+}
+.btn .btn-svg {
+  margin-left: -4px;
+  margin-right: -4px;
 }
 .btn.btn-xxl {
   /* @v size="xxl" */
@@ -901,7 +906,7 @@ template {
 }
 .btn.btn-sm {
   /* @v size="sm" */
-  gap: 6px;
+  gap: 8px;
   height: 24px;
   padding: var(--spacing-xxxs, 4px) var(--spacing-xs, 8px);
   font-size: 12px;
@@ -910,7 +915,7 @@ template {
 }
 .btn.btn-xs {
   /* @v size="xs" */
-  gap: 6px;
+  gap: 8px;
   height: 20px;
   padding: var(--spacing-xxxxs, 2px) var(--spacing-xxs, 6px);
   font-size: 12px;
@@ -918,11 +923,11 @@ template {
   letter-spacing: -0.36px;
 }
 .btn.btn-xxl .btn-svg,
-.btn.btn-xl .btn-svg,
-.btn btn-lg .btn-svg {
+.btn.btn-xl .btn-svg {
   margin-left: -8px;
   margin-right: -8px;
 }
+.btn.btn-lg .btn-svg,
 .btn.btn-md .btn-svg,
 .btn.btn-sm .btn-svg,
 .btn.btn-xs .btn-svg {
@@ -945,6 +950,14 @@ template {
 .btn-light rect {
   color: var(--text-default, #000);
 }
+.btn.btn-primary {
+  /* @v color="primary" */
+  background: var(--button-primary-background-fill-enabled, #2194f3);
+  color: var(--text-inverse, #fff);
+}
+.btn.btn-primary:hover {
+  background: var(--button-primary-background-fill-hover, #1764C0);
+}
 .btn.btn-fill {
   /* @v variant="fill" */
   background: var(--button-primary-background-fill-enabled, #2194f3);
@@ -955,36 +968,271 @@ template {
   background: var(--button-primary-background-fill-enabled, #2194f3);
   color: var(--text-inverse, #fff);
 }
+.btn.btn-fill.btn-primary:hover {
+  background: var(--button-primary-background-fill-hover, #1764C0);
+}
 .btn.btn-fill.btn-secondary {
   /* @v color="secondary" */
   background: var(--button-secondary-background-fill-enabled, #848f99);
   color: var(--text-inverse, #fff);
+}
+.btn.btn-fill.btn-secondary:hover {
+  background: var(--button-secondary-background-fill-hover, #43494E);
 }
 .btn.btn-fill.btn-dark {
   /* @v color="dark" */
   background: var(--button-dark-background-fill-enabled, #2f3337);
   color: var(--text-inverse, #fff);
 }
-.btn.btn-fill.btn-tonal {
-  /* @v color="light" */
-  background: var(--button-primary-background-tonal-enabled, rgba(33, 148, 243, 0.06));
-  color: var(--text-primary, #2194f3);
+.btn.btn-fill.btn-dark:hover {
+  background: var(--button-dark-background-fill-hover, #000);
 }
-.btn.btn-fill.btn-outline {
-  /* @v color="outline" */
-  border: 1px solid var(--button-primary-border-enabled, #2194f3);
-  background: var(--button-default, #fff);
-  color: var(--text-primary, #2194f3);
+.btn.btn-fill.btn-light {
+  /* @v color="light" */
+  background: var(--button-light-background-fill-enabled, #FFF);
+  color: var(--text-default, #000);
+}
+.btn.btn-fill.btn-light:hover {
+  background: var(--button-light-background-fill-hover, #F2F2F2);
 }
 .btn.btn-fill.btn-essential {
   /* @v color="essential" */
-  background: var(--button-essential-background-fill-hover, #FF383C);
-  color: var(--text-inverse, #fff);
+  background: var(--button-essential-background-fill-enabled, #F66);
+  color: var(--text-inverse, #FFF);
 }
-.btn.btn-fill.btn-outline {
+.btn.btn-fill.btn-essential:hover {
+  background: var(--button-essential-background-fill-hover, #FF383C);
+}
+.btn.btn-fill.btn-success {
   /* @v color="success" */
-  color: var(--text-inverse, #fff);
   background: var(--button-success-background-fill-enabled, #00A7A7);
+  color: var(--text-inverse, #FFF);
+}
+.btn.btn-fill.btn-success:hover {
+  background: var(--button-success-background-fill-hover, #008A87);
+}
+.btn.btn-fill.btn-disabled {
+  /* @v color="disabled" */
+  background: var(--button-disabled-background-disabled, rgba(67, 73, 78, 0.04));
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+  cursor: default;
+}
+.btn.btn-tonal {
+  /* @v variant="tonal" */
+  background: var(--button-primary-background-tonal-enabled, rgba(33, 148, 243, 0.06));
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-tonal.btn-primary {
+  /* @v color="primary" */
+  background: var(--button-primary-background-tonal-enabled, rgba(33, 148, 243, 0.06));
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-tonal.btn-primary:hover {
+  background: var(--button-primary-background-tonal-hover, rgba(33, 148, 243, 0.12));
+}
+.btn.btn-tonal.btn-secondary {
+  /* @v color="secondary" */
+  background: var(--button-secondary-background-tonal-enabled, rgba(67, 73, 78, 0.06));
+  color: var(--text-subtle, #6D767F);
+}
+.btn.btn-tonal.btn-secondary:hover {
+  background: var(--button-secondary-background-tonal-hover, rgba(67, 73, 78, 0.12));
+}
+.btn.btn-tonal.btn-dark {
+  /* @v color="dark" */
+  background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
+  color: var(--text-default, #000);
+}
+.btn.btn-tonal.btn-dark:hover {
+  background: var(--button-secondary-background-tonal-hover, rgba(67, 73, 78, 0.12));
+}
+.btn.btn-tonal.btn-light {
+  /* @v color="light" */
+  background: var(--button-light-background-tonal-enabled, rgba(255, 255, 255, 0.06));
+  color: var(--text-default, #000);
+}
+.btn.btn-tonal.btn-light:hover {
+  background: var(--button-light-background-tonal-hover, rgba(255, 255, 255, 0.12));
+}
+.btn.btn-tonal.btn-essential {
+  /* @v color="essential" */
+  background: var(--button-essential-background-tonal-enabled, rgba(255, 102, 102, 0.06));
+  color: var(--text-essential, #F66);
+}
+.btn.btn-tonal.btn-essential:hover {
+  background: var(--button-essential-background-tonal-hover, rgba(255, 102, 102, 0.12));
+}
+.btn.btn-tonal.btn-success {
+  /* @v color="success" */
+  background: var(--button-success-background-tonal-enabled, rgba(0, 167, 167, 0.06));
+  color: var(--text-success, #00A7A7);
+}
+.btn.btn-tonal.btn-success:hover {
+  background: var(--button-success-background-tonal-hover, rgba(0, 167, 167, 0.12));
+}
+.btn.btn-tonal.btn-disabled {
+  /* @v color="disabled" */
+  background: var(--button-disabled-background-disabled, rgba(67, 73, 78, 0.04));
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+  cursor: default;
+}
+.btn.btn-outline {
+  /* @v variant="outline" */
+  border: 1px solid var(--button-primary-border-enabled, #2194F3);
+  background: var(--button-default, #FFF);
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-outline.btn-primary {
+  /* @v color="primary" */
+  border: 1px solid var(--button-primary-border-enabled, #2194F3);
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-outline.btn-primary:hover {
+  border: 1px solid var(--button-primary-border-hover, #1764C0);
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-secondary {
+  /* @v color="secondary" */
+  border: 1px solid var(--button-secondary-border-enabled, #848F99);
+  color: var(--text-subtle, #6D767F);
+}
+.btn.btn-outline.btn-secondary:hover {
+  border: 1px solid var(--button-secondary-border-hover, #43494E);
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-dark {
+  /* @v color="dark" */
+  border: 1px solid var(--button-dark-border-enabled, #2F3337);
+  color: var(--text-default, #000);
+}
+.btn.btn-outline.btn-dark:hover {
+  border: 1px solid var(--button-dark-border-hover, #000);
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-light {
+  /* @v color="light" */
+  border: 1px solid var(--button-light-border-enabled, rgba(0, 0, 0, 0.12));
+  color: var(--text-default, #000);
+}
+.btn.btn-outline.btn-light:hover {
+  border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-essential {
+  /* @v color="essential" */
+  border: 1px solid var(--button-essential-border-enabled, #F66);
+  color: var(--text-essential, #F66);
+}
+.btn.btn-outline.btn-essential:hover {
+  border: 1px solid var(--button-essential-border-hover, #FF383C);
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-success {
+  /* @v color="success" */
+  border: 1px solid var(--button-success-border-enabled, #00A7A7);
+  color: var(--text-success, #00A7A7);
+}
+.btn.btn-outline.btn-success:hover {
+  border: 1px solid var(--button-success-border-hover, #008A87);
+  background: var(--button-default, #FFF);
+}
+.btn.btn-outline.btn-disabled {
+  /* @v color="disabled" */
+  border: 1px solid var(--button-disabled-border-disabled, rgba(67, 73, 78, 0.16));
+  background: var(--button-disabled-background-disabled, rgba(67, 73, 78, 0.04));
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+  cursor: default;
+}
+.btn.btn-text {
+  /* @v variant="text" */
+  background: var(--button-default, #FFF);
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-text.btn-primary {
+  /* @v color="primary" */
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-text.btn-primary:hover {
+  background: var(--button-primary-background-tonal-hover, rgba(33, 148, 243, 0.12));
+}
+.btn.btn-text.btn-secondary {
+  /* @v color="secondary" */
+  color: var(--text-subtle, #6D767F);
+}
+.btn.btn-text.btn-secondary:hover {
+  background: var(--button-secondary-background-tonal-hover, rgba(67, 73, 78, 0.12));
+}
+.btn.btn-text.btn-dark {
+  /* @v color="dark" */
+  color: var(--text-default, #000);
+}
+.btn.btn-text.btn-dark:hover {
+  background: var(--button-dark-background-tonal-hover, rgba(0, 0, 0, 0.12));
+}
+.btn.btn-text.btn-light {
+  /* @v color="light" */
+  color: var(--text-default, #000);
+}
+.btn.btn-text.btn-essential {
+  /* @v color="essential" */
+  color: var(--text-essential, #F66);
+}
+.btn.btn-text.btn-essential:hover {
+  background: var(--button-essential-background-tonal-hover, rgba(255, 102, 102, 0.12));
+}
+.btn.btn-text.btn-success {
+  /* @v color="success" */
+  color: var(--text-success, #00A7A7);
+}
+.btn.btn-text.btn-success:hover {
+  background: var(--button-success-background-tonal-hover, rgba(0, 167, 167, 0.12));
+}
+.btn.btn-text.btn-disabled {
+  /* @v color="disabled" */
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+  cursor: default;
+}
+.btn.btn-link {
+  /* @v variant="link" */
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text-primary, #2194f3);
+}
+.btn.btn-link .btn-label {
+  text-decoration: underline;
+}
+.btn.btn-link.btn-primary {
+  /* @v color="primary" */
+  color: var(--text-primary, #2194F3);
+}
+.btn.btn-link.btn-secondary {
+  /* @v color="secondary" */
+  color: var(--text-subtle, #6D767F);
+}
+.btn.btn-link.btn-dark {
+  /* @v color="dark" */
+  color: var(--text-default, #000);
+}
+.btn.btn-link.btn-light {
+  /* @v color="light" */
+  color: var(--text-default, #000);
+}
+.btn.btn-link.btn-essential {
+  /* @v color="essential" */
+  color: var(--text-essential, #F66);
+}
+.btn.btn-link.btn-success {
+  /* @v color="success" */
+  color: var(--text-success, #00A7A7);
+}
+.btn.btn-link:hover {
+  background: var(--button-default, #FFF);
+}
+.btn.btn-link.btn-disabled {
+  /* @v color="disabled" */
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+  cursor: default;
 }
 .btn-icon {
   display: inline-flex;
@@ -1022,6 +1270,9 @@ template {
   /* @v variant="primary" */
   background: var(--button-primary-background-fill-enabled, #2194f3);
   color: var(--text-inverse, #fff);
+}
+.btn-icon.btn-primary:hover {
+  background: var(--button-primary-background-fill-hover, #1764C0);
 }
 .btn-icon.btn-secondary {
   background: var(--button-secondary-background-fill-enabled, #848f99);
