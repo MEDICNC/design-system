@@ -850,7 +850,7 @@ template {
   color: var(--text-primary, #2194f3);
 }
 .cache-check {
-  background: red;
+  background: blue;
 }
 .uk-modal {
   /* 1 */
