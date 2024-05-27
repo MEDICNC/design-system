@@ -1,0 +1,22 @@
+/* @meta path="button" */
+.btn {
+    /* @b */
+    background:red
+}
+.btn-primary {
+    /* @v type="primary" */
+    background:#222222
+}
+.btn-zzz {
+    /* @v size="xs" */
+    background:#333333
+}
+.uppercase {
+    /* @cv type="primary" size="xs" */
+}
+
+/* @dv variant="primary" */
+
+/* @gb ["btn"] */
+/* @gv type="primary" ["shadow-sm"] */
+/* @gcv type="primary" size="xs" ["p-1"] */
