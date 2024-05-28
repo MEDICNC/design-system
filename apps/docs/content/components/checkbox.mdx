@@ -12,15 +12,107 @@ published: true
 <Preview>
   <form>
     <div className="flex items-center">
-      <div className="flex items-center checkbox-basic">
-        <label className="checkbox checkbox-md">
+      <div className="flex items-center gap-3">
+        <label className="checkbox checkbox-basic">
           <input className="checkbox-icon" type="checkbox" />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-basic">
+          <input className="checkbox-icon" type="checkbox" disabled />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-basic">
+          <input className="checkbox-icon" type="checkbox" checked disabled />
           <span className="checkbox-label">checkbox</span>
         </label>
       </div>
     </div>
   </form>
 </Preview>
+<CodeTabs>
+  <TabsContent value="html">
+    ```jsx
+    <form>
+      <div class="flex items-center">
+        <div class="flex items-center gap-3">
+          <label class="checkbox checkbox-basic">
+            <input class="checkbox-icon" type="checkbox" />
+            <span class="checkbox-label">checkbox</span>
+          </label>
+          <label class="checkbox checkbox-basic">
+            <input class="checkbox-icon" type="checkbox" disabled />
+            <span class="checkbox-label">checkbox</span>
+          </label>
+          <label class="checkbox checkbox-basic checkbox-disabled">
+            <input class="checkbox-icon" type="checkbox" checked disabled />
+            <span class="checkbox-label">checkbox</span>
+          </label>
+        </div>
+      </div>
+    </form>
+    ```
+  </TabsContent>
+  <TabsContent value="react">
+    ```jsx
+
+    ```
+
+  </TabsContent>
+</CodeTabs>
+
+## Button Checkbox
+
+<Preview>
+  <form>
+    <div className="flex items-center">
+      <div className="flex items-center gap-3">
+        <label className="checkbox checkbox-button">
+          <input className="checkbox-icon" type="checkbox" />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-button">
+          <input className="checkbox-icon" type="checkbox" disabled />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-button">
+          <input className="checkbox-icon" type="checkbox" checked disabled />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+      </div>
+    </div>
+  </form>
+</Preview>
+<CodeTabs>
+    <TabsContent value="html">
+        ```jsx
+        <form>
+            <div class="flex items-center">
+                <div class="flex items-center gap-3">
+                    <label class="checkbox checkbox-button">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-button checkbox-disabled">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-button checkbox-disabled">
+                        <input class="checkbox-icon" type="checkbox" checked="checked" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        ```
+    </TabsContent>
+    <TabsContent value="react">
+        ```jsx
+
+        ```
+
+    </TabsContent>
+
+</CodeTabs>
 
 <br />
 
@@ -31,16 +123,16 @@ published: true
 <Preview>
   <form>
     <div className="flex items-center">
-      <div className="flex items-center checkbox-basic">
-        <label className="checkbox checkbox-lg">
+      <div className="flex items-center gap-3">
+        <label className="checkbox checkbox-basic checkbox-lg">
           <input className="checkbox-icon" type="checkbox" />
           <span className="checkbox-label">checkbox</span>
         </label>
-        <label className="checkbox checkbox-md">
+        <label className="checkbox checkbox-basic checkbox-md">
           <input className="checkbox-icon" type="checkbox" />
           <span className="checkbox-label">checkbox</span>
         </label>
-        <label className="checkbox checkbox-sm">
+        <label className="checkbox checkbox-basic checkbox-sm">
           <input className="checkbox-icon" type="checkbox" />
           <span className="checkbox-label">checkbox</span>
         </label>
@@ -48,20 +140,86 @@ published: true
     </div>
   </form>
 </Preview>
+<CodeTabs>
+    <TabsContent value="html">
+        ```jsx
+        <form>
+            <div class="flex items-center">
+                <div class="flex items-center gap-3">
+                    <label class="checkbox checkbox-basic checkbox-lg">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-basic checkbox-md">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-basic checkbox-sm">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        ```
+    </TabsContent>
+    <TabsContent value="react">
+        ```jsx
 
-[//]: # "## Button Checkbox"
-[//]: #
-[//]: # "<Preview>"
-[//]: # "  <form>"
-[//]: # '    <div className="flex items-center">'
-[//]: # '      <div className="flex items-center checkbox-button">'
-[//]: # '        <label className="checkbox-label">'
-[//]: # '          <input className="checkbox-icon" type="checkbox" /> checkbox button'
-[//]: # "        </label>"
-[//]: # '        <label className="checkbox-label">'
-[//]: # '          <input className="checkbox-icon" type="checkbox" /> checkbox button'
-[//]: # "        </label>"
-[//]: # "      </div>"
-[//]: # "    </div>"
-[//]: # "  </form>"
-[//]: # "</Preview>"
+        ```
+    </TabsContent>
+
+</CodeTabs>
+
+## Button Checkbox
+
+<Preview>
+  <form>
+    <div className="flex items-center">
+      <div className="flex items-center gap-3">
+        <label className="checkbox checkbox-button checkbox-lg">
+          <input className="checkbox-icon" type="checkbox" />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-button checkbox-md">
+          <input className="checkbox-icon" type="checkbox" />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+        <label className="checkbox checkbox-button checkbox-sm">
+          <input className="checkbox-icon" type="checkbox" />
+          <span className="checkbox-label">checkbox</span>
+        </label>
+      </div>
+    </div>
+  </form>
+</Preview>
+<CodeTabs>
+    <TabsContent value="html">
+        ```jsx
+        <form>
+            <div class="flex items-center">
+                <div class="flex items-center gap-3">
+                    <label class="checkbox checkbox-button checkbox-lg">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-button checkbox-md">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                    <label class="checkbox checkbox-button checkbox-sm">
+                        <input class="checkbox-icon" type="checkbox" />
+                        <span class="checkbox-label">checkbox</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        ```
+    </TabsContent>
+    <TabsContent value="react">
+        ```jsx
+
+        ```
+    </TabsContent>
+
+</CodeTabs>
