@@ -194,6 +194,9 @@ importers:
       archiver:
         specifier: ^7.0.1
         version: 7.0.1
+      autoprefixer:
+        specifier: ^10.0.1
+        version: 10.4.19(postcss@8.4.31)
       camelcase:
         specifier: ^8.0.0
         version: 8.0.0
@@ -246,7 +249,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       postcss:
-        specifier: ^8
+        specifier: ^8.4.31
         version: 8.4.31
       postcss-cva:
         specifier: ^0.2.5
@@ -278,6 +281,9 @@ importers:
       svgo:
         specifier: ^3.2.0
         version: 3.3.2
+      tailwindcss:
+        specifier: ^3.3.0
+        version: 3.4.3
 
   packages/eslint-config:
     devDependencies:

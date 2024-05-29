@@ -8439,7 +8439,7 @@
       data: {
         clsPage: "uk-modal-page",
         selPanel: ".uk-modal-dialog",
-        selClose: ".uk-modal-close, .uk-modal-close-default, .uk-modal-close-outside, .uk-modal-close-full"
+        selClose: ".uk-modal-close, .uk-modal-footer button, .uk-modal-close-default, .uk-modal-close-outside, .uk-modal-close-full"
       },
       events: [
         {

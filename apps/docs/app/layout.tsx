@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn, sortPosts } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
@@ -12,7 +11,8 @@ import { promises as fs } from "fs";
 import "../../uikit/dist/css/uikit-core.css";
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head";
+import {headers} from "next/headers";
+import SideMenu from "@/components/side-menu";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -32,9 +32,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const componentPosts = posts.filter((post) =>
-    post.slug.includes("components"),
-  );
   const scriptFile = await fs.readFile(
     "../uikit/dist/js/uikit-core.min.js",
     "utf8",
@@ -53,19 +50,15 @@ export default async function RootLayout({
         />
         <Script>{iconScriptFile}</Script>
       </head>
-      <body className={cn("min-h-screen bg-background")}>
+      <body className={cn("min-h-screen")}>
         <Providers>
-          <div className="relative flex min-h-dvh flex-col bg-background">
+          <div className="relative flex min-h-dvh flex-col">
             <SiteHeader />
             <div className="container max-w-screen-xl flex flex-auto">
               <div className="flex w-full">
                 <aside className="py-6 lg:py-10 w-[20%]">
                   <div className="flex flex-col">
-                    {componentPosts?.map((post) => (
-                      <Link href={"/" + post.slug} className="py-2">
-                        {post.componentName}
-                      </Link>
-                    ))}
+                    <SideMenu />
                   </div>
                 </aside>
                 <main className="w-[80%] mb-20">{children}</main>

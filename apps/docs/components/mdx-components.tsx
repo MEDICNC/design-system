@@ -5,6 +5,7 @@ import {Button} from "react-uikit/button";
 import CodeTabs from "@/components/CodeTabs";
 import {TabsContent} from "react-uikit/tabs";
 import {Confirm, Alert} from "@/components/dialog";
+import {ScriptCode} from "@/components/script-code";
 
 
 const useMDXComponent = (code: string) => {
@@ -19,7 +20,8 @@ const components = {
     CodeTabs,
     TabsContent,
     Confirm,
-    Alert
+    Alert,
+    ScriptCode
 };
 
 interface MdxProps {
