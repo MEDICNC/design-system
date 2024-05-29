@@ -59,8 +59,6 @@ export default async function RootLayout({
           crossOrigin="anonymous"
         ></script>
         <script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js" />
-
-        <Script>{iconScriptFile}</Script>
       </head>
       <body className={cn("min-h-screen")}>
         <Providers>
@@ -81,6 +79,7 @@ export default async function RootLayout({
         </Providers>
 
         <Script>{scriptFile}</Script>
+        <Script>{iconScriptFile}</Script>
       </body>
     </html>
   );
