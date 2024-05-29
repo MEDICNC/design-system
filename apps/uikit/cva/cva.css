@@ -62,6 +62,9 @@
   line-height: 16px;
   letter-spacing: -0.36px;
 }
+.btn .btn-svg {
+    display: inline-flex;
+}
 .btn.btn-xxl .btn-svg,
 .btn.btn-xl .btn-svg,
 .btn btn-lg .btn-svg {
