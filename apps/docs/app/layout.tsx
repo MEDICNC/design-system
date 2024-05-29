@@ -11,7 +11,7 @@ import { promises as fs } from "fs";
 import "../../uikit/dist/css/uikit-core.css";
 import "./globals.css";
 import Script from "next/script";
-import {headers} from "next/headers";
+import { headers } from "next/headers";
 import SideMenu from "@/components/side-menu";
 
 export const metadata: Metadata = {
@@ -48,6 +48,18 @@ export default async function RootLayout({
           href="https://webfontworld.github.io/sunn/SUIT.css"
           rel="stylesheet"
         />
+
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.css"
+        />
+        <script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossOrigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js" />
+
         <Script>{iconScriptFile}</Script>
       </head>
       <body className={cn("min-h-screen")}>
