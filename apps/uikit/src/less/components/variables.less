@@ -28,8 +28,12 @@
   --num-32-rem: 2rem;
   --num-40: 40px;
   --num-40-rem: 2.5rem;
+  --num-0: 0px;
+  --num-0-rem: 0rem;
   --num-48: 48px;
   --num-48-rem: 3rem;
+  --num-56: 56px;
+  --num-56-rem: 3.5rem;
   --num-60: 60px;
   --num-60-rem: 3.75rem;
   --num-72: 72px;
@@ -87,6 +91,7 @@
   --transparent-neutral-800-8: rgba(67 73 78 / 0.08);
   --transparent-neutral-800-12: rgba(67 73 78 / 0.12);
   --transparent-neutral-800-16: rgba(67 73 78 / 0.16);
+  --gray-gray-900a: rgba(33 33 33 / 0.32);
   --red-red-50: #ffeaed;
   --red-red-100: #ffcacf;
   --red-red-200: #ff9492;
@@ -116,6 +121,8 @@
   --green-green-900: #004e48;
   --num-20: 20px;
   --num-20-rem: 1.25rem;
+  --num-120: 120px;
+  --num-120-rem: 7.5rem;
   --num-160: 160px;
   --num-160-rem: 10rem;
   --transparent-blue-500-24: rgba(33 148 243 / 0.24);
@@ -182,8 +189,14 @@
   --icon-default: var(--gray-gray-900);
   --icon-subtle: var(--neutral-neutral-600);
   --icon-primary: var(--blue-blue-500);
+  --border-default: var(--neutral-neutral-900);
   --border-subtle: var(--neutral-neutral-600);
+  --border-primary: var(--blue-blue-500);
+  --state-layer-primary-8: var(--transparent-blue-500-8);
+  --state-layer-primary-12: var(--transparent-blue-500-12);
+  --state-layer-primary-16: var(--transparent-blue-500-16);
   --state-layer-neutral-8: var(--transparent-neutral-800-8);
+  --state-layer-neutral-12: var(--transparent-neutral-800-12);
   --state-layer-neutral-16: var(--transparent-neutral-800-16);
   --text-inverse: var(--black-white-black-white-0);
   --border-essential: var(--red-red-300);
@@ -197,6 +210,7 @@
   --icon-disabled: var(--transparent-neutral-800-32);
   --icon-inverse: var(--black-white-black-white-0);
   --input-background-enabled: var(--black-white-black-white-0);
+  --input-background-active: var(--black-white-black-white-0);
   --input-background-disabled: var(--neutral-neutral-100);
   --input-border-enabled: var(--transparent-neutral-800-24);
   --input-border-active: var(--blue-blue-500);
@@ -210,18 +224,22 @@
   --text-success: var(--green-green-400);
   --icon-success: var(--green-green-400);
   --button-default: var(--black-white-black-white-0);
+  --button-inverse: var(--black-white-black-white-1000);
+  --border-inverse: var(--black-white-black-white-0);
   --border-divider-dark-solid: var(--transparent-neutral-800-16);
   --border-modal-outline: var(--transparent-neutral-800-32);
   --button-inverse-subtle: var(--neutral-neutral-600);
   --border-success: var(--green-green-400);
   --input-border-success: var(--green-green-400);
   --surface-success: var(--green-green-400);
+  --surface-disabled: var(--gray-gray-900a);
   --button-subtle: var(--gray-gray-100);
   --surface-divider-dark-solid: var(--transparent-neutral-800-12);
   --button-disabled-border-disabled: var(--transparent-neutral-800-16);
   --button-secondary-background-fill-enabled: var(--neutral-neutral-500);
   --button-secondary-background-fill-hover: var(--neutral-neutral-800);
   --button-switch-enabled__blank: var(--neutral-neutral-400);
+  --button-switch-active: var(--blue-blue-500);
   --button-switch-disabled__blank: var(--transparent-black-8);
   --button-switch-disabled: var(--transparent-blue-500-16);
   --button-essential-background-fill-enabled: var(--red-red-300);
@@ -253,6 +271,13 @@
   --button-light-background-tonal-enabled: var(--transparent-white-6);
   --button-light-background-tonal-hover: var(--transparent-white-12);
   --button-light-background-fill-hover: var(--gray-gray-100);
+  --border-divider-dark-dash: var(--transparent-neutral-800-24);
+  --surface-divider-dark-dash: var(--transparent-neutral-800-24);
+  --surface-dark-tonal: var(--transparent-black-4);
+  --surface-divider-light-solid: var(--transparent-white-24);
+  --surface-divider-light-dash: var(--transparent-white-40);
+  --border-divider-light-solid: var(--transparent-white-24);
+  --border-divider-light-dash: var(--transparent-white-40);
 
   /* SEMENTIC: RADIUS */
   --radius-sm: var(--num-2);
@@ -261,18 +286,55 @@
   --radius-xl: var(--num-8);
   --radius-pill: 9999px;
   --radius-pill-rem: 624.9375rem;
+  --radius-2xl: var(--num-12);
 
   /* SEMENTIC: SPACING */
   --spacing-md: var(--num-16);
+  --spacing-lg: var(--num-20);
   --spacing-xl: var(--num-24);
+  --spacing-2xl: var(--num-32);
+  --spacing-3xl: var(--num-40);
   --spacing-sm: var(--num-12);
   --spacing-xs: var(--num-8);
-  --spacing-xxs: var(--num-6);
-  --spacing-xxxs: var(--num-4);
-  --spacing-xxxxs: var(--num-2);
+  --spacing-2xs: var(--num-6);
+  --spacing-3xs: var(--num-4);
+  --spacing-4xs: var(--num-2);
+  --spacing-4xl: var(--num-60);
+  --spacing-5xl: var(--num-120);
 
   /* PRIMITIVE: TYPOGRAPHY */
+  --font-family-old: "Noto Sans KR";
   --font-family-new: "SUIT";
+  --font-size-font-size-50: 10px;
+  --font-size-font-size-50-rem: 0.625rem;
+  --font-size-font-size-100: 12px;
+  --font-size-font-size-100-rem: 0.75rem;
+  --font-size-font-size-200: 14px;
+  --font-size-font-size-200-rem: 0.875rem;
+  --font-size-font-size-300: 16px;
+  --font-size-font-size-300-rem: 1rem;
+  --font-size-font-size-400: 20px;
+  --font-size-font-size-400-rem: 1.25rem;
+  --font-size-font-size-500: 24px;
+  --font-size-font-size-500-rem: 1.5rem;
+  --font-size-font-size-600: 28px;
+  --font-size-font-size-600-rem: 1.75rem;
+  --font-size-font-size-700: 32px;
+  --font-size-font-size-700-rem: 2rem;
+  --font-size-font-size-800: 36px;
+  --font-size-font-size-800-rem: 2.25rem;
+  --font-size-font-size-900: 45px;
+  --font-size-font-size-900-rem: 2.8125rem;
+  --font-size-font-size-1000: 57px;
+  --font-size-font-size-1000-rem: 3.5625rem;
+  --font-weight-font-weight-regular: 400px;
+  --font-weight-font-weight-regular-rem: 25rem;
+  --font-weight-font-weight-medium: 500px;
+  --font-weight-font-weight-medium-rem: 31.25rem;
+  --font-weight-font-weight-semibold: 600px;
+  --font-weight-font-weight-semibold-rem: 37.5rem;
+  --font-weight-font-weight-bold: 700px;
+  --font-weight-font-weight-bold-rem: 43.75rem;
 
   /* SEMANTIC: TYPOGRAPHY */
   --font-family-font-family-display: var(--font-family-new);
