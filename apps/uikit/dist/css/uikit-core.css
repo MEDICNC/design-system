@@ -1408,6 +1408,41 @@ template {
 .input.input-sm.ico-image input {
   padding-right: 24px;
 }
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.switch > p {
+  display: flex;
+  align-items: center;
+}
+.switch > p::before,
+.switch > p::after {
+  content: none;
+}
+.switch .toggle {
+  appearance: none;
+  position: relative;
+  width: 34px;
+  height: 24px;
+  border-radius: 1.25em;
+  background: #A4ADB4;
+}
+.switch .toggle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -50px;
+  border-radius: 50%;
+  transform: scale(0.8);
+  background-color: #ffffff;
+  transition: left 250ms linear;
+}
 /* @meta path="button" */
 /* @dv variant="basic" color="primary" size="md" */
 .btn {
