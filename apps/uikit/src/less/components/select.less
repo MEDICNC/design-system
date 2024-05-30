@@ -1,7 +1,10 @@
-@charset "UTF-8";
 /**
- * @author zhixin wen <wenzhixin2010@gmail.com>
+ * multiple select cdn 가져와 커스텀
+ * <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.css">
  */
+
+
+
 .ms-offscreen {
     clip: rect(0 0 0 0) !important;
     width: 1px !important;
@@ -20,23 +23,33 @@
     display: inline-block;
     position: relative;
     vertical-align: middle;
+    border: 1px solid var(--input-border-enabled, rgba(67, 73, 78, 0.24));
+    border-radius: var(--radius-md, 4px);
+    transition: all 0.15s ease-in-out;
 }
 
 .ms-choice {
     display: block;
     width: 100%;
-    height: 26px;
+    height: 32px;
     padding: 0;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid #aaa;
     text-align: left;
     white-space: nowrap;
-    line-height: 26px;
-    color: #444;
+    line-height: 32px;
+    color: var(--text-default);
     text-decoration: none;
-    border-radius: 4px;
-    background-color: #fff;
+    background: var(--button-default, #FFF);
+    border-radius: var(--radius-md, 4px);
+    font-size: 14px;
+}
+
+// size sm
+.select-sm .ms-choice {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
 }
 
 .ms-choice.disabled {
@@ -85,41 +98,43 @@
     width: 0;
     height: 0;
     top: 50%;
-    right: 8px;
+    right: 14px;
     margin-top: -2px;
-    border-color: #888 transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
     border-style: solid;
-    border-width: 5px 4px 0 4px;
+    border-width: 4px 4px 0 4px;
 }
 
 .ms-choice > div.icon-caret.open {
-    border-color: transparent transparent #888 transparent;
-    border-width: 0 4px 5px 4px;
+    border-color: transparent transparent #000 transparent;
+    border-width: 0 4px 4px 4px;
 }
 
 .ms-drop {
     width: auto;
     min-width: 100%;
+    max-height: 272px;
     overflow: hidden;
     display: none;
-    margin-top: -1px;
-    padding: 0;
+    margin-top: 4px;
     position: absolute;
     z-index: 1000;
     background: #fff;
     color: #000;
-    border: 1px solid #aaa;
     border-radius: 4px;
-}
+    background: var(--surface-default, #FFF);
+    padding: 8px 0;
+  }
 
 .ms-drop.bottom {
     top: 100%;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 1px var(--state-layer-neutral-8, rgba(67, 73, 78, 0.08)), 0px var(--radus-xxxs, 4px) var(--radus-xs, 8px) 0px var(--state-layer-neutral-16, rgba(67, 73, 78, 0.16));
+
 }
 
 .ms-drop.top {
     bottom: 100%;
-    box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 1px var(--state-layer-neutral-8, rgba(67, 73, 78, 0.08)), 0px var(--radus-xxxs, 4px) var(--radus-xs, 8px) 0px var(--state-layer-neutral-16, rgba(67, 73, 78, 0.16));
 }
 
 .ms-search {
@@ -201,6 +216,12 @@
 
 .ms-drop ul > li.hide-radio {
     padding: 0;
+    margin: 0;
+}
+
+.ms-drop ul > li.hide-radio:hover {
+  background: var(--button-light-background-fill-hover, #F2F2F2);
+
 }
 
 .ms-drop ul > li.hide-radio:focus, .ms-drop ul > li.hide-radio:hover {
@@ -209,12 +230,13 @@
 
 .ms-drop ul > li.hide-radio.selected {
     color: #fff;
-    background-color: #007bff;
+    background: var(--surface-primary, #2194F3);
 }
 
 .ms-drop ul > li.hide-radio label {
     margin-bottom: 0;
-    padding: 5px 8px;
+    padding: 6px 12px;
+    font-size: 14px;
 }
 
 .ms-drop ul > li.hide-radio input {
@@ -238,4 +260,9 @@
 
 .ms-drop .ms-no-results {
     display: none;
+}
+
+.ms-parent-open {
+    border: 1px solid var(--input-border-active, #2194F3);
+  border-radius: 4px;
 }

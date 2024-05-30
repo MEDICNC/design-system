@@ -5,14 +5,55 @@ date: 2024-05-29
 published: true
 ---
 
+# Library
+
+multiple select 사용
+
+api 참조 https://multiple-select.wenzhixin.net.cn/docs/en/options
+
+# Example
+
+<Preview>
+  <select>
+    <option value="1">January</option>
+    <option value="2">December</option>
+    <option value="3">March</option>
+  </select>
+</Preview>
+
+```jsx
 <select>
   <option value="1">January</option>
   <option value="2">December</option>
-  <option value="3">asdasdasd</option>
+  <option value="3">March</option>
 </select>
+```
+
+# sm size
+
+<Preview>
+  <select className="select-sm">
+    <option value="1">January</option>
+    <option value="2">December</option>
+    <option value="3">March</option>
+  </select>
+</Preview>
+
+```jsx
+<select class="select-sm">
+  <option value="1">January</option>
+  <option value="2">December</option>
+  <option value="3">March</option>
+</select>
+```
+
+# width 유의사항
+
+-디자인 팀 전달사항
+
+옵션들 중 가장 큰 text 길이에 맞춰 select button width 설정하기.
+(multiple select에서 계산 해줌)
 
 <ScriptCode>
   <>$('select').multipleSelect()</>
 </ScriptCode>
-
-<i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
