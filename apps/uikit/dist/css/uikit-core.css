@@ -1498,6 +1498,83 @@ button.uk-icon:not(:disabled) {
   background-color: #ffffff;
   transition: left 250ms linear;
 }
+.textarea {
+  display: flex;
+  width: var(--font-weight-font-weight-regular, 400px);
+  height: 240px;
+  min-width: var(--num-160, 160px);
+  padding: var(--num-12, 12px) var(--num-20, 20px);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--radius-md, 4px);
+  border: 1px solid var(--input-border-enabled, rgba(67, 73, 78, 0.24));
+  background: var(--input-background-enabled, #FFF);
+  resize: none;
+  color: var(--text-default, #000);
+  /* Body/xl 20px/400 */
+  font-family: var(--font-family-font-family-body, SUIT);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  /* 140% */
+  letter-spacing: -0.6px;
+}
+.textarea:focus,
+.textarea:focus-visible,
+.textarea:active {
+  border-style: solid;
+  outline: none;
+}
+.textarea:focus {
+  border: 1px solid var(--input-border-active, #2194F3);
+}
+.textarea::placeholder {
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+}
+.textarea-xl {
+  display: flex;
+  width: var(--font-weight-font-weight-regular, 400px);
+  height: 240px;
+  min-width: var(--num-160, 160px);
+  padding: var(--num-12, 12px) var(--num-20, 20px);
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.textarea-lg {
+  display: flex;
+  width: 360px;
+  height: 200px;
+  padding: var(--num-8, 8px) var(--num-12, 12px);
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.textarea-md {
+  display: flex;
+  width: 360px;
+  height: var(--num-160, 160px);
+  padding: var(--num-6, 6px) var(--num-12, 12px);
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.textarea-sm {
+  display: flex;
+  width: 360px;
+  height: 120px;
+  padding: var(--num-4, 4px) var(--num-12, 12px);
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.textarea-essential {
+  border-radius: var(--radius-md, 4px);
+  border: 1px solid var(--input-border-essential, #F66);
+  background: var(--input-background-active, #FFF);
+}
+.textarea-disabled {
+  border: 1px solid var(--input-border-disabled, rgba(67, 73, 78, 0.16));
+  background: var(--input-background-disabled, #F1F5F8);
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
+}
 /* @meta path="button" */
 /* @dv variant="basic" color="primary" size="md" */
 .btn {
