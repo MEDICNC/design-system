@@ -1,12 +1,12 @@
 import { posts } from "#site/content";
 import { MDXContent } from "@/components/mdx-components";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 import "@/styles/mdx.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { Tag } from "@/components/tag";
-
+import { headers } from "next/headers";
 interface PostPageProps {
   params: {
     slug: string[];
@@ -66,7 +66,6 @@ export async function generateStaticParams(): Promise<
 
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
-
   if (!post || !post.published) {
     notFound();
   }

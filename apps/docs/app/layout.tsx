@@ -48,13 +48,6 @@ export default async function RootLayout({
           href="https://webfontworld.github.io/sunn/SUIT.css"
           rel="stylesheet"
         />
-
-        <script
-          src="https://code.jquery.com/jquery-3.7.1.min.js"
-          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-          crossOrigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js" />
       </head>
       <body className={cn("min-h-screen")}>
         <Providers>
