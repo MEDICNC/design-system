@@ -18,6 +18,7 @@
   background: #123456;
 }
 .btn .btn-svg {
+  display: inline-flex;
   margin-left: -4px;
   margin-right: -4px;
 }

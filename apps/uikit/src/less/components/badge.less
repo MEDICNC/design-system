@@ -3,15 +3,19 @@
 
 // Badge
 .badge {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: var(--num-2, 2px);
+  gap: 8px;
+  min-width: 24px;
+  min-height: 24px;
   padding: var(--spacing-3xs, 4px) var(--spacing-xs, 8px);
   border-radius: var(--radius-md, 4px);
   background: var(--surface-primary, #2194F3);
 
   color: var(--text-inverse, #FFF);
+
+  /* Label/sm 12px */
   font-family: var(--font-family-font-family-label, SUIT), sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -19,8 +23,30 @@
   line-height: 16px; /* 133.333% */
   letter-spacing: -0.36px;
 
-  &.badge-basic {
-    min-width: 24px;
+  .badge-svg {
+    display: inline-flex;
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  &.badge-md {
+    /* @v size="md" */
+    gap: 8px;
+    height: 24px;
+  }
+
+  &.badge-sm {
+    /* @v size="sm" */
+    gap: 8px;
+    min-width: 20px;
+    min-height: 20px;
+    padding: var(--num-2, 2px) var(--num-6, 6px);
+    font-size: 12px;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: -0.36px;
+  }
+
+  &.badge-basic, &.badge-pill {
     border-radius: var(--radius-md, 4px);
 
     &.badge-brand-subtle{
@@ -58,6 +84,7 @@
   }
 
   &.badge-pill {
+    padding: var(--spacing-3xs, 4px) var(--spacing-xs, 8px);
     border-radius: var(--num-12, 12px);
   }
 
@@ -67,8 +94,83 @@
     justify-content: center;
     width: var(--num-6, 6px);
     height: var(--num-6, 6px);
+    min-width:var(--num-6, 6px);
+    min-height: var(--num-6, 6px);
     padding: 0;
     border-radius: var(--num-4, 4px);
     background: var(--surface-essential, #F66);
+  }
+}
+
+.badge-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-3xs, 4px);
+  border-radius: var(--radius-md, 4px);
+  background: var(--surface-primary, #2194F3);
+  color: var(--text-inverse, #FFF);
+
+  &.badge-md {
+    /* @v size="md" */
+    gap: 8px;
+    height: 24px;
+  }
+
+  &.badge-sm {
+    /* @v size="sm" */
+    padding: var(--num-2, 2px);
+  }
+
+  &.badge-brand-subtle{
+    background: var(--surface-primary-subtle, #E3F2FD);
+    color: var(--text-primary, #2194F3);
+  }
+  &.badge-secondary{
+    background: var(--button-secondary-background-fill-enabled, #848F99);
+  }
+  &.badge-dark{
+    background: var(--button-dark-background-fill-enabled, #2F3337);
+  }
+  &.badge-danger{
+    background: var(--surface-essential, #F66);
+  }
+  &.badge-danger-subtle{
+    background: var(--surface-essential-subtle, #FFEAED);
+    color: var(--text-essential, #F66);
+  }
+  &.badge-success{
+    background: var(--button-success, #00A7A7);
+  }
+  &.badge-success-subtle{
+    background: var(--surface-success-subtle, #E0F2F3);
+    color: var(--text-success, #00A7A7);
+  }
+  &.badge-light{
+    background: var(--button-default, #FFF);
+    color: var(--text-default, #000);
+  }
+  &.badge-tonal{
+    background: var(--button-secondary-background-tonal-enabled, rgba(67, 73, 78, 0.06));
+    color: var(--text-subtle, #6D767F);
+  }
+
+  &.badge-pill {
+    border-radius: var(--num-12, 12px);
+  }
+}
+
+.badge-svg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+
+  svg {
+    width: 100%;
+    height: 100%;
   }
 }
