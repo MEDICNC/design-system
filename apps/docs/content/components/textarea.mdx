@@ -1,6 +1,6 @@
 ---
-componentName: Text Area
-title: Text Area
+componentName: TextArea
+title: TextArea
 date: 2024-05-30
 published: true
 ---
@@ -8,8 +8,8 @@ published: true
 # variant
 
 <Preview>
-  <div className="flex items-center gap-3">
-    <form className="flex flex-wrap gap-3">
+  <div className="flex items-center justify-center">
+    <form className="flex flex-col items-center gap-3">
       <textarea
         className="textarea textarea-primary"
         placeholder="Placeholder"
@@ -29,24 +29,22 @@ published: true
 </Preview>
 
 ```jsx
-<div className="flex items-center gap-3">
-  <form className="flex flex-wrap gap-3">
-    <textarea
-      className="textarea textarea-primary"
-      placeholder="Placeholder"
-    ></textarea>
-    <textarea
-      className="textarea textarea-essential"
-      placeholder="Placeholder"
-    ></textarea>
-    <textarea
-      className="textarea textarea-disabled"
-      placeholder="Placeholder"
-      value="Text Area disabled"
-      disabled
-    ></textarea>
-  </form>
-</div>
+<form className="flex flex-col items-center gap-3">
+  <textarea
+    className="textarea textarea-primary"
+    placeholder="Placeholder"
+  ></textarea>
+  <textarea
+    className="textarea textarea-essential"
+    placeholder="Placeholder"
+  ></textarea>
+  <textarea
+    className="textarea textarea-disabled"
+    placeholder="Placeholder"
+    value="Text Area disabled"
+    disabled
+  ></textarea>
+</form>
 ```
 
 <br />
@@ -54,8 +52,8 @@ published: true
 # size
 
 <Preview>
-  <div className="flex items-center justify-center gap-3">
-    <form className="flex-col items-center">
+  <div className="flex items-center justify-center">
+    <form className="flex flex-col items-center gap-3">
       <textarea
         className="textarea textarea-primary textarea-xl"
         placeholder="Placeholder"
@@ -75,3 +73,24 @@ published: true
     </form>
   </div>
 </Preview>
+
+```jsx
+<form className="flex flex-col items-center gap-3">
+  <textarea
+    className="textarea textarea-primary textarea-xl"
+    placeholder="Placeholder"
+  ></textarea>
+  <textarea
+    className="textarea textarea-primary textarea-lg"
+    placeholder="Placeholder"
+  ></textarea>
+  <textarea
+    className="textarea textarea-primary textarea-md"
+    placeholder="Placeholder"
+  ></textarea>
+  <textarea
+    className="textarea textarea-primary textarea-sm"
+    placeholder="Placeholder"
+  ></textarea>
+</form>
+```

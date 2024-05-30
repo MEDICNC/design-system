@@ -2453,7 +2453,7 @@ button.uk-icon:not(:disabled) {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   min-width: 24px;
   min-height: 24px;
   padding: var(--spacing-3xs, 4px) var(--spacing-xs, 8px);
@@ -2473,22 +2473,6 @@ button.uk-icon:not(:disabled) {
   display: inline-flex;
   margin-left: -4px;
   margin-right: -4px;
-}
-.badge.badge-md {
-  /* @v size="md" */
-  gap: 8px;
-  height: 24px;
-}
-.badge.badge-sm {
-  /* @v size="sm" */
-  gap: 8px;
-  min-width: 20px;
-  min-height: 20px;
-  padding: var(--num-2, 2px) var(--num-6, 6px);
-  font-size: 12px;
-  line-height: 16px;
-  /* 133.333% */
-  letter-spacing: -0.36px;
 }
 .badge.badge-basic,
 .badge.badge-pill {
@@ -2539,6 +2523,21 @@ button.uk-icon:not(:disabled) {
   padding: var(--spacing-3xs, 4px) var(--spacing-xs, 8px);
   border-radius: var(--num-12, 12px);
 }
+.badge.badge-md {
+  /* @v size="md" */
+  height: 24px;
+  padding: var(--spacing-3xs, 4px) var(--spacing-xs, 8px);
+}
+.badge.badge-sm {
+  /* @v size="sm" */
+  min-width: 20px;
+  min-height: 20px;
+  padding: var(--num-2, 2px) var(--num-6, 6px);
+  font-size: 12px;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.36px;
+}
 .badge.badge-dot {
   display: flex;
   align-items: center;
@@ -2559,15 +2558,6 @@ button.uk-icon:not(:disabled) {
   border-radius: var(--radius-md, 4px);
   background: var(--surface-primary, #2194F3);
   color: var(--text-inverse, #FFF);
-}
-.badge-icon.badge-md {
-  /* @v size="md" */
-  gap: 8px;
-  height: 24px;
-}
-.badge-icon.badge-sm {
-  /* @v size="sm" */
-  padding: var(--num-2, 2px);
 }
 .badge-icon.badge-brand-subtle {
   background: var(--surface-primary-subtle, #E3F2FD);
@@ -2602,7 +2592,16 @@ button.uk-icon:not(:disabled) {
   color: var(--text-subtle, #6D767F);
 }
 .badge-icon.badge-pill {
+  padding: var(--spacing-3xs, 4px);
   border-radius: var(--num-12, 12px);
+}
+.badge-icon.badge-md {
+  /* @v size="md" */
+  height: 24px;
+}
+.badge-icon.badge-sm {
+  /* @v size="sm" */
+  padding: var(--num-2, 2px);
 }
 .badge-svg {
   display: inline-flex;
