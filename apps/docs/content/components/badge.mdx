@@ -15,6 +15,14 @@ published: true
   </div>
 </Preview>
 
+```jsx
+<div className="flex items-center gap-3">
+  <div className="badge badge-basic">Primary</div>
+  <div className="badge badge-pill">Badge</div>
+  <div className="badge badge-dot"></div>
+</div>
+```
+
 # color
 
 ## Basic badge / Pill badge
@@ -63,6 +71,53 @@ published: true
     </div>
   </div>
 </Preview>
+
+```jsx
+// [//]: # (basic)
+// color 별로 클래스 변경
+// badge-primary, badge-brand-subtle, badge-secondary, badge-dark, badge-danger,
+// badge-danger-subtle, badge-success, badge-success-subtle, badge-light, badge-tonal
+    <div className="badge badge-basic badge-primary">Badge</div>
+    <div className="badge badge-basic badge-primary">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+      <span className="badge-label">Badge</span>
+    </div>
+    <div className="badge badge-basic badge-primary">
+      <span className="badge-label">Badge</span>
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+    <div className="badge-icon badge-basic badge-primary">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+// [//]: # (pill)
+// color 별로 클래스 변경
+// badge-primary, badge-brand-subtle, badge-secondary, badge-dark, badge-danger,
+// badge-danger-subtle, badge-success, badge-success-subtle, badge-light, badge-tonal
+    <div className="badge badge-pill badge-primary">Badge</div>
+    <div className="badge badge-pill badge-primary">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+      <span className="badge-label">Badge</span>
+    </div>
+    <div className="badge badge-pill badge-primary">
+      <span className="badge-label">Badge</span>
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+    <div className="badge-icon badge-pill badge-primary">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+```
 
 ### Brand-subtle
 
@@ -564,3 +619,44 @@ published: true
     </div>
   </div>
 </Preview>
+
+```jsx
+// [//]: # (basic)
+    <div className="badge badge-basic badge-primary badge-md">Badge</div>
+    <div className="badge badge-basic badge-primary badge-md">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+      <span className="badge-label">Badge</span>
+    </div>
+    <div className="badge badge-basic badge-primary badge-md">
+      <span className="badge-label">Badge</span>
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+    <div className="badge-icon badge-basic badge-primary badge-md">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+// [//]: # (pill)
+    <div className="badge badge-pill badge-primary badge-md">Badge</div>
+    <div className="badge badge-pill badge-primary badge-md">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+      <span className="badge-label">Badge</span>
+    </div>
+    <div className="badge badge-pill badge-primary badge-md">
+      <span className="badge-label">Badge</span>
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+    <div className="badge-icon badge-pill badge-primary badge-md">
+      <span className="badge-svg">
+        <i uk-icon="icon: photo-200; ratio: 0.8334;"></i>
+      </span>
+    </div>
+```
