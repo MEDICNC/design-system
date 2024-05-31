@@ -326,14 +326,11 @@
   --font-family-font-family-body: var(--font-family-new);
   --font-family-font-family-label: var(--font-family-new);
 }
-/* ========================================================================
-   Component: Base
- ========================================================================== */
-/*
- * 1. Set `font-size` to support `rem` units
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- * 3. Style
- */
+body {
+  -webkit-text-size-adjust: 100%;
+  background: transparent;
+  color: #000;
+}
 .text-primary {
   color: var(--blue-blue-500);
 }
