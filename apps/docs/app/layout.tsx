@@ -50,22 +50,20 @@ export default async function RootLayout({
         />
       </head>
       <body className={cn("min-h-screen")}>
-        <Providers>
-          <div className="relative flex min-h-dvh flex-col">
-            <SiteHeader />
-            <div className="container max-w-screen-xl flex flex-auto">
-              <div className="flex w-full">
-                <aside className="py-6 lg:py-10 w-[20%]">
-                  <div className="flex flex-col">
-                    <SideMenu />
-                  </div>
-                </aside>
-                <main className="w-[80%] mb-20">{children}</main>
-              </div>
+        <div className="relative flex min-h-dvh flex-col">
+          <SiteHeader />
+          <div className="container max-w-screen-xl flex flex-auto">
+            <div className="flex w-full">
+              <aside className="py-6 lg:py-10 w-[20%]">
+                <div className="flex flex-col">
+                  <SideMenu />
+                </div>
+              </aside>
+              <main className="w-[80%] mb-20">{children}</main>
             </div>
-            <SiteFooter />
           </div>
-        </Providers>
+          <SiteFooter />
+        </div>
 
         <Script>{scriptFile}</Script>
         <Script>{iconScriptFile}</Script>

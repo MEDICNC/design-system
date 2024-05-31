@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "Uikit",
   url: "https://example.com",
-  description: "Nextjs 14 blog using velite, tailwind and shadcn",
+  description: "메디게이트 UI 디자인 시스템",
   author: "dev",
   links: {
-    twitter: "https://twitter.com/jollyshopland",
-    github: "https://github.com/jolbol1",
-    personalSite: "https://jamesshopland.com",
+    twitter: "",
+    github: "https://github.com/MEDICNC/design-system",
+    personalSite: "",
   },
 };
 

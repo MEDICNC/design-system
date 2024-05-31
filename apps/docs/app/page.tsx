@@ -15,12 +15,6 @@ export default function Home() {
           </h1>
           <div className="flex flex-col gap-4 justify-center sm:flex-row mt-5">
             <Link
-              href="/blog"
-              className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
-            >
-              View my blog
-            </Link>
-            <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
