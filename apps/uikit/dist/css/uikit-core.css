@@ -326,11 +326,6 @@
   --font-family-font-family-body: var(--font-family-new);
   --font-family-font-family-label: var(--font-family-new);
 }
-body {
-  -webkit-text-size-adjust: 100%;
-  background: transparent;
-  color: #000;
-}
 .text-primary {
   color: var(--blue-blue-500);
 }
