@@ -2338,96 +2338,130 @@ button.uk-icon:not(:disabled) {
 .uk-pagination > .uk-disabled > * {
   color: black;
 }
-/* ========================================================================
-   Component: Tab
- ========================================================================== */
-/*
- * 1. Allow items to wrap into the next line
- * 2. Gutter
- * 3. Reset list
- */
 .uk-tab {
   display: flex;
-  /* 1 */
-  flex-wrap: wrap;
-  /* 2 */
-  margin-left: -20px;
-  /* 3 */
-  padding: 0;
   list-style: none;
 }
-/*
- * 1. Space is allocated solely based on content dimensions: 0 0 auto
- * 2. Gutter
- * 3. Create position context for dropdowns
- */
-.uk-tab > * {
-  /* 1 */
-  flex: none;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  position: relative;
-}
-/* Items
- ========================================================================== */
-/*
- * Items must target `a` elements to exclude other elements (e.g. dropdowns)
- * 1. Center content vertically, e.g. an icon
- * 2. Imitate white space gap when using flexbox
- * 3. Center content if a width is set
- * 4. Style
- */
-.uk-tab > * > a {
-  /* 1 */
-  display: flex;
-  align-items: center;
-  /* 2 */
-  column-gap: 0.25em;
-  /* 3 */
+.uk-tab a {
+  display: inline-flex;
   justify-content: center;
-  /* 4 */
-  padding: 5px 10px;
-  color: blue;
-}
-/* Hover */
-.uk-tab > * > a:hover {
-  color: red;
+  align-items: center;
   text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
 }
-/* Active */
-.uk-tab > .uk-active > a {
-  color: green;
+.uk-tab-md a {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+  letter-spacing: -0.42px;
 }
-/* Disabled */
-.uk-tab > .uk-disabled > a {
-  color: #ddd;
+.uk-tab-sm a {
+  height: 24px;
+  padding: 0 12px;
+  font-size: 12px;
+  letter-spacing: -0.36px;
 }
-/* Position modifier
- ========================================================================== */
-/*
- * Bottom
- */
-/*
- * Left + Right
- * 1. Reset Gutter
- */
-.uk-tab-left,
-.uk-tab-right {
-  flex-direction: column;
-  /* 1 */
-  margin-left: 0;
+.uk-tab.uk-pill-tonal {
+  gap: 8px;
 }
-/* 1 */
-.uk-tab-left > *,
-.uk-tab-right > * {
-  padding-left: 0;
+.uk-tab.uk-pill-tonal a {
+  background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
 }
-.uk-tab-left > * > a {
-  justify-content: left;
+.uk-tab.uk-pill-tonal .uk-active a {
+  background: var(--button-primary-background-fill-enabled, #2194F3);
+  color: white;
 }
-.uk-tab-right > * > a {
-  justify-content: left;
+.uk-tab.uk-pill-tonal li:not(.uk-active) a:hover {
+  background: var(--button-default, #FFF);
+}
+.uk-tab.uk-pill-tonal.uk-tab-md a {
+  border-radius: var(--num-16, 16px);
+}
+.uk-tab.uk-pill-tonal.uk-tab-sm a {
+  border-radius: var(--num-12, 12px);
+}
+.uk-tab.uk-pill-text {
+  gap: 8px;
+}
+.uk-tab.uk-pill-text .uk-active a {
+  background: var(--button-dark-background-fill-enabled, #2F3337);
+  color: white;
+}
+.uk-tab.uk-pill-text li:not(.uk-active) a:hover {
+  background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
+}
+.uk-tab.uk-pill-text.uk-tab-md a {
+  border-radius: var(--num-16, 16px);
+}
+.uk-tab.uk-pill-text.uk-tab-sm a {
+  border-radius: var(--num-12, 12px);
+}
+.uk-tab.uk-button-tonal {
+  gap: 8px;
+}
+.uk-tab.uk-button-tonal a {
+  padding: 0 8px;
+  border-radius: var(--num-4, 4px);
+  background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
+}
+.uk-tab.uk-button-tonal .uk-active a {
+  background: var(--button-primary-background-fill-enabled, #2194F3);
+  color: white;
+}
+.uk-tab.uk-button-tonal li:not(.uk-active) a:hover {
+  background: var(--button-default, #FFF);
+}
+.uk-tab.uk-button-outline a {
+  width: 132px;
+  text-align: center;
+  border: 1px solid #E6E6E6;
+}
+.uk-tab.uk-button-outline a {
+  border-left: none;
+}
+.uk-tab.uk-button-outline li:first-child a {
+  border-left: 1px solid #E6E6E6;
+}
+.uk-tab.uk-button-outline .uk-active a {
+  background: var(--button-primary-background-fill-enabled, #2194F3);
+  color: white;
+  border-color: var(--button-primary-background-fill-enabled, #2194F3);
+}
+.uk-tab.uk-button-outline li:not(.uk-active) a:hover {
+  background: var(--button-dark-background-outline-enabled, rgba(0, 0, 0, 0.06));
+}
+.uk-tab.uk-underline {
+  border-bottom: 1px solid var(--border-divider-dark-solid, rgba(67, 73, 78, 0.16));
+}
+.uk-tab.uk-underline.uk-tab-md {
+  gap: 24px;
+}
+.uk-tab.uk-underline.uk-tab-md a {
+  height: 40px;
+  font-size: 14px;
+}
+.uk-tab.uk-underline.uk-tab-sm {
+  gap: 20px;
+}
+.uk-tab.uk-underline.uk-tab-sm a {
+  height: 40px;
+  font-size: 12px;
+}
+.uk-tab.uk-underline a {
+  position: relative;
+  padding: 0 4px;
+}
+.uk-tab.uk-underline .uk-active a {
+  color: var(--button-primary-background-fill-enabled, #2194F3);
+}
+.uk-tab.uk-underline .uk-active a:before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--button-primary-background-fill-enabled, #2194F3);
 }
 .display-lg {
   color: var(--text-default, #000);

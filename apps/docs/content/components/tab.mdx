@@ -1,27 +1,206 @@
-
 ---
 componentName: Tab
 title: Tab
 date: 2024-05-24
 ---
 
-<ul class="uk-tab uk-subnav-pill" uk-switcher="connect: .uk-switcher">
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-    <li><a href="#">Item</a></li>
-</ul>
-<div class="uk-switcher uk-margin">
-    <div>Hello! <a href="#" uk-switcher-item="2">Switch to item 3</a></div>
-    <div>Hello again! <a href="#" uk-switcher-item="next">Next item</a></div>
-    <div>Bazinga! <a href="#" uk-switcher-item="previous">Previous item</a></div>
-</div>
+# variants
 
 <Preview>
-    <ul uk-tab="true">
-        <li class="uk-active"><a href="#">Left</a>asdasd</li>
-        <li><a href="#">Item</a>asasdasdas</li>
-        <li><a href="#">Item</a>asdasdasd</li>
-        <li class="uk-disabled"><a>Disabled</a>asdasdas</li>
+    <ul
+    class="uk-tab uk-pill-tonal uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n1"
+    >
+        <li>
+          <a href="#">Tab 1</a>
+        </li>
+        <li>
+          <a href="#">Tab 2</a>
+        </li>
     </ul>
+    <div class="uk-switcher uk-switcher-n1 uk-margin">
+        <div>Tab Content 1</div>
+        <div>Tab Content 2</div>
+    </div>
+    <br />
+
+    <ul
+        class="uk-tab uk-pill-text uk-tab-md"
+        uk-switcher="connect: .uk-switcher-n10"
+    >
+        <li>
+            <a href="#">Tab 1</a>
+        </li>
+        <li>
+            <a href="#">Tab 2</a>
+        </li>
+    </ul>
+    <div class="uk-switcher uk-switcher-n10 uk-margin">
+        <div>Tab Content 1</div>
+        <div>Tab Content 2</div>
+    </div>
+    <br />
+
+    <ul
+        class="uk-tab uk-button-tonal uk-tab-md"
+        uk-switcher="connect: .uk-switcher-n11"
+    >
+        <li>
+            <a href="#">Tab 1</a>
+        </li>
+        <li>
+            <a href="#">Tab 2</a>
+        </li>
+    </ul>
+    <div class="uk-switcher uk-switcher-n11 uk-margin">
+        <div>Tab Content 1</div>
+        <div>Tab Content 2</div>
+    </div>
+    <br />
+
+    <ul
+        class="uk-tab uk-button-outline uk-tab-md"
+        uk-switcher="connect: .uk-switcher-n12"
+    >
+        <li>
+            <a href="#">Tab 1</a>
+        </li>
+        <li>
+            <a href="#">Tab 2</a>
+        </li>
+    </ul>
+    <div class="uk-switcher uk-switcher-n12 uk-margin">
+        <div>Tab Content 1</div>
+        <div>Tab Content 2</div>
+    </div>
+    <br />
+
+    <ul
+        class="uk-tab uk-underline uk-tab-md"
+        uk-switcher="connect: .uk-switcher-n13"
+    >
+        <li>
+            <a href="#">Tab 1</a>
+        </li>
+        <li>
+            <a href="#">Tab 2</a>
+        </li>
+    </ul>
+    <div class="uk-switcher uk-switcher-n13 uk-margin">
+        <div>Tab Content 1</div>
+        <div>Tab Content 2</div>
+    </div>
+    <br />
+
 </Preview>
 
+```jsx
+// uk-pill-tonal
+<ul
+    class="uk-tab uk-pill-tonal uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n1"
+>
+    <li>
+        <a href="#">Tab 1</a>
+    </li>
+    <li>
+        <a href="#">Tab 2</a>
+    </li>
+</ul>
+<div class="uk-switcher uk-switcher-n1 uk-margin">
+    <div>Tab Content 1</div>
+    <div>Tab Content 2</div>
+</div>
+
+// uk-pill-text
+<ul
+    class="uk-tab uk-pill-text uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n10"
+>
+    <li>
+        <a href="#">Tab 1</a>
+    </li>
+    <li>
+        <a href="#">Tab 2</a>
+    </li>
+</ul>
+<div class="uk-switcher uk-switcher-n10 uk-margin">
+    <div>Tab Content 1</div>
+    <div>Tab Content 2</div>
+</div>
+
+// uk-button-tonal
+<ul
+    class="uk-tab uk-button-tonal uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n11"
+>
+    <li>
+        <a href="#">Tab 1</a>
+    </li>
+    <li>
+        <a href="#">Tab 2</a>
+    </li>
+</ul>
+<div class="uk-switcher uk-switcher-n11 uk-margin">
+    <div>Tab Content 1</div>
+    <div>Tab Content 2</div>
+</div>
+
+// uk-button-outline
+<ul
+    class="uk-tab uk-button-outline uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n12"
+>
+    <li>
+        <a href="#">Tab 1</a>
+    </li>
+    <li>
+        <a href="#">Tab 2</a>
+    </li>
+</ul>
+<div class="uk-switcher uk-switcher-n12 uk-margin">
+    <div>Tab Content 1</div>
+    <div>Tab Content 2</div>
+</div>
+
+// uk-underline
+<ul
+    class="uk-tab uk-underline uk-tab-md"
+    uk-switcher="connect: .uk-switcher-n13"
+>
+    <li>
+        <a href="#">Tab 1</a>
+    </li>
+    <li>
+        <a href="#">Tab 2</a>
+    </li>
+</ul>
+<div class="uk-switcher uk-switcher-n13 uk-margin">
+    <div>Tab Content 1</div>
+    <div>Tab Content 2</div>
+</div>
+```
+
+# 탭 버튼만
+
+<Preview>
+  <ul className="uk-tab uk-pill-tonal uk-tab-md">
+    <li>
+      <a href="#">Tab 1</a>
+    </li>
+    <li className="uk-active">
+      <a href="#">Tab 2</a>
+    </li>
+  </ul>
+</Preview>
+
+```jsx
+<ul class="uk-tab uk-pill-tonal uk-tab-md">
+  <li>
+    <a href="#">Tab 1</a>
+  </li>
+  <li class="uk-active">
+    <a href="#">Tab 2</a>
+  </li>
+</ul>
+```

@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-    mode:'jit',
-    content: [
+  mode: "jit",
+  content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
@@ -18,10 +18,9 @@ const config = {
         "2xl": "1400px",
       },
     },
-    extend: {
-    },
+    extend: {},
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;
