@@ -2286,6 +2286,59 @@ button.uk-icon:not(:disabled) {
   margin-bottom: 0;
 }
 /* ========================================================================
+   Component: Pagination
+ ========================================================================== */
+/*
+ * 1. Allow items to wrap into the next line
+ * 2. Center items vertically if they have a different height
+ * 3. Gutter
+ * 4. Reset list
+ */
+.uk-pagination {
+  display: flex;
+  /* 1 */
+  flex-wrap: wrap;
+  /* 2 */
+  align-items: center;
+  /* 3 */
+  padding: 0;
+  list-style: none;
+}
+.uk-pagination > * {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 12px;
+  color: var(--text-default, #000);
+  font-size: 14px;
+  border-radius: var(--radius-md, 4px);
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+.uk-pagination-prev,
+.uk-pagination-next {
+  padding: 0 6px;
+}
+.uk-pagination > *:hover {
+  background: var(--button-text-hover, rgba(0, 0, 0, 0.06));
+}
+/* Hover */
+.uk-pagination > * > :hover {
+  color: black;
+  text-decoration: none;
+}
+/* Active */
+.uk-pagination .uk-active {
+  background: var(--button-text-selected, rgba(33, 148, 243, 0.12));
+  color: var(--text-primary, #2194F3);
+}
+/* Disabled */
+.uk-pagination > .uk-disabled > * {
+  color: black;
+}
+/* ========================================================================
    Component: Tab
  ========================================================================== */
 /*
@@ -2505,8 +2558,4 @@ button.uk-icon:not(:disabled) {
   line-height: 12px;
   /* 120% */
   letter-spacing: -0.3px;
-}
-.preview p,
-.uk-modal-dialog p {
-  margin: 0 !important;
 }

@@ -4358,6 +4358,7 @@
         ratio: 1
       },
       connected() {
+        console.log("this", this);
         this.svg = this.getSvg().then((el) => {
           if (!this._connected) {
             return;
@@ -4410,6 +4411,9 @@
       if (viewBox && !dimensions.some((val) => val)) {
         dimensions = viewBox.split(" ").slice(2);
       }
+      console.log("thisthis", this);
+      console.log("dimensions", dimensions);
+      console.log("this.width", this.width);
       dimensions.forEach((val, i) => attr(el, props[i], toFloat(val) * this.ratio || null));
     }
 
