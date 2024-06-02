@@ -1129,7 +1129,7 @@ button.uk-icon:not(:disabled) {
   resize: none;
   color: var(--text-default, #000);
   /* Body/xl 20px/400 */
-  font-family: var(--font-family-font-family-body, SUIT);
+  font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
