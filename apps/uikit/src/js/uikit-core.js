@@ -10,4 +10,10 @@ each(components, (component, name) => UIkit.component(name, component));
 
 boot(UIkit);
 
+$(() => {
+    if ($('select').length) {
+        $('select').multipleSelect();
+    }
+});
+
 export default UIkit;

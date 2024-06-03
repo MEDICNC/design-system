@@ -747,12 +747,12 @@
       });
     }
     function empty(element) {
-      element = $(element);
+      element = $$1(element);
       element.innerHTML = "";
       return element;
     }
     function html(parent2, html2) {
-      return isUndefined(html2) ? $(parent2).innerHTML : append(empty(parent2), html2);
+      return isUndefined(html2) ? $$1(parent2).innerHTML : append(empty(parent2), html2);
     }
     const prepend = applyFn("prepend");
     const append = applyFn("append");
@@ -762,7 +762,7 @@
       return function(ref, element) {
         var _a;
         const nodes = toNodes(isString(element) ? fragment(element) : element);
-        (_a = $(ref)) == null ? void 0 : _a[fn](...nodes);
+        (_a = $$1(ref)) == null ? void 0 : _a[fn](...nodes);
         return unwrapSingle(nodes);
       };
     }
@@ -812,7 +812,7 @@
         node = next;
       }
     }
-    function $(selector, context) {
+    function $$1(selector, context) {
       return isHtml(selector) ? toNode(fragment(selector)) : find(selector, context);
     }
     function $$(selector, context) {
@@ -961,7 +961,7 @@
         return vh;
       }
       if (!vhEl) {
-        vhEl = $("<div>");
+        vhEl = $$1("<div>");
         css(vhEl, {
           height: "100vh",
           position: "fixed"
@@ -1535,7 +1535,7 @@
 
     var util = /*#__PURE__*/Object.freeze({
         __proto__: null,
-        $: $,
+        $: $$1,
         $$: $$,
         Animation: Animation,
         Dimensions: Dimensions,
@@ -2335,7 +2335,7 @@
           return container || document.body;
         },
         set(element) {
-          container = $(element);
+          container = $$1(element);
         }
       });
     }
@@ -2709,12 +2709,12 @@
       computed: {
         items: ({ targets }, $el) => $$(targets, $el),
         toggles({ toggle }) {
-          return this.items.map((item) => $(toggle, item));
+          return this.items.map((item) => $$1(toggle, item));
         },
         contents({ content }) {
           return this.items.map((item) => {
             var _a;
-            return ((_a = item._wrapper) == null ? void 0 : _a.firstElementChild) || $(content, item);
+            return ((_a = item._wrapper) == null ? void 0 : _a.firstElementChild) || $$1(content, item);
           });
         }
       },
@@ -2807,7 +2807,7 @@
               (el) => this.toggleElement(el, !includes(activeItems, el), (el2, show) => {
                 toggleClass(el2, this.clsOpen, show);
                 if (animate === false || !this.animation) {
-                  hide($(this.content, el2), !show);
+                  hide($$1(this.content, el2), !show);
                   return;
                 }
                 return transition(el2, show, this);
@@ -2822,7 +2822,7 @@
     }
     async function transition(el, show, { content, duration, velocity, transition: transition2 }) {
       var _a;
-      content = ((_a = el._wrapper) == null ? void 0 : _a.firstElementChild) || $(content, el);
+      content = ((_a = el._wrapper) == null ? void 0 : _a.firstElementChild) || $$1(content, el);
       if (!el._wrapper) {
         el._wrapper = wrapAll(content, "<div>");
       }
@@ -3045,7 +3045,7 @@
       },
       computed: {
         container({ container }) {
-          return container === true && this.$container || container && $(container);
+          return container === true && this.$container || container && $$1(container);
         }
       }
     };
@@ -3266,7 +3266,7 @@
           delegate: () => 'a[href*="#"]',
           handler({ defaultPrevented, current }) {
             const { hash } = current;
-            if (!defaultPrevented && hash && isSameSiteAnchor(current) && !this.$el.contains($(hash))) {
+            if (!defaultPrevented && hash && isSameSiteAnchor(current) && !this.$el.contains($$1(hash))) {
               this.hide(false);
             }
           }
@@ -3576,8 +3576,8 @@
           if (!dropbar) {
             return null;
           }
-          dropbar = this._dropbar || query(dropbar, this.$el) || $(`+ .${this.clsDropbar}`, this.$el);
-          return dropbar ? dropbar : this._dropbar = $("<div></div>");
+          dropbar = this._dropbar || query(dropbar, this.$el) || $$1(`+ .${this.clsDropbar}`, this.$el);
+          return dropbar ? dropbar : this._dropbar = $$1("<div></div>");
         },
         dropContainer(_, $el) {
           return this.container || $el;
@@ -3641,7 +3641,7 @@
             const active2 = this.getActive();
             if (keyCode === keyMap.DOWN && (active2 == null ? void 0 : active2.targetEl) === current) {
               e.preventDefault();
-              (_a = $(selFocusable, active2.$el)) == null ? void 0 : _a.focus();
+              (_a = $$1(selFocusable, active2.$el)) == null ? void 0 : _a.focus();
             }
             handleNavItemNavigation(e, this.items, active2);
           }
@@ -3846,12 +3846,12 @@
         target: false
       },
       computed: {
-        input: (_, $el) => $(selInput, $el),
+        input: (_, $el) => $$1(selInput, $el),
         state() {
           return this.input.nextElementSibling;
         },
         target({ target }, $el) {
-          return target && (target === true && parent(this.input) === $el && this.input.nextElementSibling || $(target, $el));
+          return target && (target === true && parent(this.input) === $el && this.input.nextElementSibling || $$1(target, $el));
         }
       },
       update() {
@@ -4612,7 +4612,7 @@
         async getSvg() {
           const icon = await Icon.methods.getSvg.call(this);
           if (this.ratio !== 1) {
-            css($("circle", icon), "strokeWidth", 1 / this.ratio);
+            css($$1("circle", icon), "strokeWidth", 1 / this.ratio);
           }
           return icon;
         }
@@ -5030,7 +5030,7 @@
         role: "dialog"
       },
       computed: {
-        panel: ({ selPanel }, $el) => $(selPanel, $el),
+        panel: ({ selPanel }, $el) => $$1(selPanel, $el),
         transitionElement() {
           return this.panel;
         },
@@ -5056,7 +5056,7 @@
           handler(e) {
             const { current, defaultPrevented } = e;
             const { hash } = current;
-            if (!defaultPrevented && hash && isSameSiteAnchor(current) && !this.$el.contains($(hash))) {
+            if (!defaultPrevented && hash && isSameSiteAnchor(current) && !this.$el.contains($$1(hash))) {
               this.hide();
             } else if (matches(current, this.selClose)) {
               e.preventDefault();
@@ -5263,7 +5263,7 @@
     };
     function install({ modal }) {
       modal.dialog = function(content, options) {
-        const dialog = modal($(`<div><div class="uk-modal-dialog">${content}</div></div>`), {
+        const dialog = modal($$1(`<div><div class="uk-modal-dialog">${content}</div></div>`), {
           stack: true,
           role: "alertdialog",
           ...options
@@ -5301,7 +5301,7 @@
           () => input.value
         );
         const { $el } = promise.dialog;
-        const input = $("input", $el);
+        const input = $$1("input", $el);
         input.value = value || "";
         on($el, "show", () => input.select());
         return promise;
@@ -5532,7 +5532,7 @@
       viewport.content = viewport.content.replace(/,user-scalable=0$/, "");
     }
     function getViewport() {
-      return $('meta[name="viewport"]', document.head) || append(document.head, '<meta name="viewport">');
+      return $$1('meta[name="viewport"]', document.head) || append(document.head, '<meta name="viewport">');
     }
 
     var overflowAuto = {
@@ -5596,7 +5596,7 @@
       },
       methods: {
         async scrollTo(el) {
-          el = el && $(el) || document.body;
+          el = el && $$1(el) || document.body;
           if (trigger(this.$el, "beforescroll", [this, el])) {
             await scrollIntoView(el, { offset: this.offset });
             trigger(this.$el, "scrolled", [this, el]);
@@ -5849,12 +5849,12 @@
         targetOffset: false
       },
       computed: {
-        target: ({ selTarget }, $el) => selTarget && $(selTarget, $el) || $el
+        target: ({ selTarget }, $el) => selTarget && $$1(selTarget, $el) || $el
       },
       connected() {
         this.start = coerce(this.start || this.top);
         this.end = coerce(this.end || this.bottom);
-        this.placeholder = $("+ .uk-sticky-placeholder", this.$el) || $('<div class="uk-sticky-placeholder"></div>');
+        this.placeholder = $$1("+ .uk-sticky-placeholder", this.$el) || $$1('<div class="uk-sticky-placeholder"></div>');
         this.isFixed = false;
         this.setActive(false);
       },
@@ -5891,7 +5891,7 @@
               return;
             }
             setTimeout(() => {
-              const targetOffset = offset($(location.hash));
+              const targetOffset = offset($$1(location.hash));
               const elOffset = offset(this.$el);
               if (this.isFixed && intersectRect(targetOffset, elOffset)) {
                 scrollingElement.scrollTop = Math.ceil(
@@ -13878,6 +13878,11 @@
 
     each(components, (component, name) => App.component(name, component));
     boot(App);
+    $(() => {
+      if ($("select").length) {
+        $("select").multipleSelect();
+      }
+    });
 
     return App;
 
