@@ -2593,3 +2593,86 @@ button.uk-icon:not(:disabled) {
   /* 120% */
   letter-spacing: -0.3px;
 }
+.uk-spacing-4xs {
+  height: 2px;
+}
+.uk-spacing-3xs {
+  height: 4px;
+}
+.uk-spacing-2xs {
+  height: 6px;
+}
+.uk-spacing-xs {
+  height: 8px;
+}
+.uk-spacing-sm {
+  height: 12px;
+}
+.uk-spacing-md {
+  height: 16px;
+}
+.uk-spacing-lg {
+  height: 20px;
+}
+.uk-spacing-xl {
+  height: 24px;
+}
+.uk-spacing-2xl {
+  height: 32px;
+}
+.uk-spacing-3xl {
+  height: 40px;
+}
+.uk-spacing-4xl {
+  height: 48px;
+}
+.uk-radius-sm {
+  border-radius: 2px;
+}
+.uk-radius-md {
+  border-radius: 4px;
+}
+.uk-radius-lg {
+  border-radius: 6px;
+}
+.uk-radius-xl {
+  border-radius: 8px;
+}
+.uk-radius-2xl {
+  border-radius: 12px;
+}
+.uk-radius-pill {
+  border-radius: 9999px;
+}
+.uk-divider {
+  height: 1px;
+  margin: var(--spacing-md, 16px) 0px;
+  background: var(--border-divider-dark-solid, rgba(67, 73, 78, 0.16));
+}
+.uk-divider.uk-divider-vertical {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1px;
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+}
+.uk-divider-dash {
+  height: 1px;
+  margin: var(--spacing-md, 16px) 0px;
+  background-image: linear-gradient(to right, rgba(67, 73, 78, 0.24) 50%, white 0%);
+  background-size: 4px 2px;
+  background-repeat: repeat-x;
+}
+.uk-divider-dash.uk-divider-vertical {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1px;
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+  background-image: linear-gradient(to bottom, rgba(67, 73, 78, 0.24) 50%, white 0%);
+  background-repeat: repeat-y;
+}

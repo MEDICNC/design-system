@@ -115,3 +115,8 @@ body {
 .article > h1:first-child {
   margin-bottom: 0;
 }
+
+pre {
+  padding: 16px;
+  margin: 12px 0;
+}

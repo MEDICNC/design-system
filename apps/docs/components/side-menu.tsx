@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 
 const SideMenu = () => {
   const pathname = usePathname();
-  const currentComponent = pathname.split("/").pop();
-  const currentIntro = pathname.split("/").pop();
+  const currentComponent = pathname.split("/").pop()?.toLowerCase();
+  const currentIntro = pathname.split("/").pop()?.toLowerCase();
 
   const introPosts = posts.filter((post) => post.slug.includes("intro"));
   const componentPosts = posts.filter((post) =>
