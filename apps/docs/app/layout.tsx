@@ -48,6 +48,9 @@ export default async function RootLayout({
           href="https://webfontworld.github.io/sunn/SUIT.css"
           rel="stylesheet"
         />
+
+        <Script>{scriptFile}</Script>
+        <Script>{iconScriptFile}</Script>
       </head>
       <body className={cn("min-h-screen")}>
         <div className="relative flex min-h-dvh flex-col">
@@ -64,9 +67,6 @@ export default async function RootLayout({
           </div>
           <SiteFooter />
         </div>
-
-        <Script>{scriptFile}</Script>
-        <Script>{iconScriptFile}</Script>
       </body>
     </html>
   );
