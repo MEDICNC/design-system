@@ -5,7 +5,8 @@ import {
     css,
     hasClass,
     height,
-    html, isObject,
+    html,
+    isObject,
     isString,
     isTag,
     noop,
@@ -95,10 +96,10 @@ function install({ modal }) {
         return openDialog(
             ({ i18n }) => `<div class="uk-dialog-body">
                     <p class="uk-dialog-title">${options?.title || ''}</p>
-                    <p class="uk-dialog-text">${typeof options ==='string' ? html(options) ||'' : options?.text ||''}</p>
+                    <p class="uk-dialog-text">${typeof options === 'string' ? html(options) || '' : options?.text || ''}</p>
                 </div>
                 <div class="uk-dialog-footer">
-                    <button class="btn btn-fill btn-primary btn-lg uk-modal-close" autofocus>${options?.confirmButtonText || i18n.ok}</button>
+                    <button class="uk-btn uk-btn-fill uk-btn-primary uk-btn-lg uk-modal-close" autofocus>${options?.confirmButtonText || i18n.ok}</button>
                 </div>`,
             options,
         );
@@ -112,10 +113,10 @@ function install({ modal }) {
                     <p class="uk-dialog-text">${isObject(options) ? options?.text || '' : html(options) || ''}</p>
                 </div>
                 <div class="uk-dialog-footer">
-                    <button class="btn btn-tonal btn-dark btn-lg uk-modal-close">${
+                    <button class="uk-btn uk-btn-tonal uk-btn-dark uk-btn-lg uk-modal-close">${
                         options?.cancelButtonText || i18n.cancel
                     }</button>
-                    <button class="btn btn-fill btn-primary btn-lg" autofocus>${options?.confirmButtonText || i18n.ok}</button>
+                    <button class="uk-btn uk-btn-fill uk-btn-primary uk-btn-lg" autofocus>${options?.confirmButtonText || i18n.ok}</button>
                 </div>
             </form>`,
             options,

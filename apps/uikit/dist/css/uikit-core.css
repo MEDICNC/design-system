@@ -1861,17 +1861,28 @@ button.uk-icon:not(:disabled) {
   border: 1px solid var(--input-border-active, #2194F3);
   border-radius: 4px;
 }
+.uk-scroll {
+  overflow-y: auto;
+}
+.uk-scroll-horizontal {
+  overflow-x: auto;
+  white-space: nowrap;
+}
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white;
+  background: var(--Medigate-theme-neutral-variant-neutral-variant100, #F1F4F8);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #C2C7CC;
   border-radius: 3px;
+}
+.uk-scroll-transparent::-webkit-scrollbar-track {
+  background: transparent;
 }
 /* @meta path="badge" */
 /* @dv variant="basic" color="primary" size="md" */
