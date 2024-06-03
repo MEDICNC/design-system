@@ -4,6 +4,7 @@ import Uikit from "../../uikit/dist/js/uikit-core";
 
 export const Confirm = () => {
   const handleClick = () => {
+    // @ts-ignore
     Uikit.modal
       .confirm({
         title: "제목",
@@ -34,6 +35,7 @@ export const Confirm = () => {
 
 export const Alert = () => {
   const handleClick = () => {
+    // @ts-ignore
     UIkit.modal.alert({ text: "Alert 입니다." }).then(function () {
       console.log("확인 클릭");
     });
