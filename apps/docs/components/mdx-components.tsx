@@ -1,12 +1,11 @@
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import { Preview } from "./preview";
-import {Button} from "react-uikit/button";
+import { Button } from "react-uikit/button";
 import CodeTabs from "@/components/CodeTabs";
-import {TabsContent} from "react-uikit/tabs";
-import {Confirm, Alert} from "@/components/dialog";
-import {ScriptCode} from "@/components/script-code";
-
+import { TabsContent } from "react-uikit/tabs";
+import { Confirm, Alert } from "@/components/dialog";
+import { ScriptCode } from "@/components/script-code";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -14,14 +13,14 @@ const useMDXComponent = (code: string) => {
 };
 
 const components = {
-    Image,
-    Button,
-    Preview,
-    CodeTabs,
-    TabsContent,
-    Confirm,
-    Alert,
-    ScriptCode
+  Image,
+  Button,
+  Preview,
+  CodeTabs,
+  TabsContent,
+  Confirm,
+  Alert,
+  ScriptCode,
 };
 
 interface MdxProps {

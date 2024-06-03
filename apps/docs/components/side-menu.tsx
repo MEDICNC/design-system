@@ -14,6 +14,7 @@ const SideMenu = () => {
   const componentPosts = posts.filter((post) =>
     post.slug.includes("components"),
   );
+  const utilsPosts = posts.filter((post) => post.slug.includes("utils"));
 
   return (
     <div className="flex flex-col gap-8">
@@ -36,6 +37,22 @@ const SideMenu = () => {
       <div>
         <p className="font-semibold text-lg mb-0">컴포넌트</p>
         {componentPosts?.map((post) => (
+          <Link
+            href={"/" + post.slug}
+            className={cn(
+              "py-1 block w-1/2 text-gray-700",
+              currentComponent === post.componentName.toLowerCase() &&
+                "font-semibold underline",
+            )}
+          >
+            {post.componentName}
+          </Link>
+        ))}
+      </div>
+
+      <div>
+        <p className="font-semibold text-lg mb-0">Utils & Hooks</p>
+        {utilsPosts?.map((post) => (
           <Link
             href={"/" + post.slug}
             className={cn(

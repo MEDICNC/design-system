@@ -51,7 +51,6 @@ await Promise.all(Object.values(tasks).map((task) => limit(task)));
 function getBundleTasks() {
     return {
         core: () => compile('src/js/uikit-core.js', 'dist/js/uikit-core'),
-
         uikit: () => compile('src/js/uikit.js', 'dist/js/uikit'),
 
         icons: async () =>
