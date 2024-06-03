@@ -1,8 +1,10 @@
 "use client";
 
+import Uikit from "../../uikit/src/js/uikit";
+
 export const Confirm = () => {
   const handleClick = () => {
-    UIkit.modal
+    Uikit.modal
       .confirm({
         title: "제목",
         text: "Confirm 입니다.",
