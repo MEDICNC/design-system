@@ -1,6 +1,6 @@
 "use client";
 
-import Uikit from "../../uikit/src/js/uikit";
+import Uikit from "../../uikit/dist/js/uikit-core";
 
 export const Confirm = () => {
   const handleClick = () => {
