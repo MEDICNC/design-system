@@ -13,6 +13,7 @@ import "./globals.css";
 import Script from "next/script";
 import { headers } from "next/headers";
 import SideMenu from "@/components/side-menu";
+import ImportScript from "@/components/import-script";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -27,20 +28,11 @@ export const viewport: Viewport = {
   ],
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const scriptFile = await fs.readFile(
-    "../uikit/dist/js/uikit-core.min.js",
-    "utf8",
-  );
-  const iconScriptFile = await fs.readFile(
-    "../uikit/dist/js/uikit-icons.min.js",
-    "utf8",
-  );
-
   return (
     <html lang="en" className="scroll-pt-[3.5rem]">
       <head>
@@ -65,8 +57,7 @@ export default async function RootLayout({
           <SiteFooter />
         </div>
 
-        <Script>{scriptFile}</Script>
-        <Script>{iconScriptFile}</Script>
+        <ImportScript />
       </body>
     </html>
   );
