@@ -116,6 +116,17 @@ body {
   margin-bottom: 0;
 }
 
+.article a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article h1 a,
+.article h2 a,
+.article h3 a {
+  text-decoration: none;
+}
+
 pre {
   font-size: 14px;
   overflow-x: auto;
