@@ -22,6 +22,7 @@ const SideMenu = () => {
         <p className="font-semibold text-lg mb-0">참고 및 셋팅</p>
         {introPosts?.map((post) => (
           <Link
+            key={post.slug}
             href={"/" + post.slug}
             className={cn(
               "py-1 block w-1/2 text-gray-700",
@@ -38,6 +39,7 @@ const SideMenu = () => {
         <p className="font-semibold text-lg mb-0">컴포넌트</p>
         {componentPosts?.map((post) => (
           <Link
+            key={post.slug}
             href={"/" + post.slug}
             className={cn(
               "py-1 block w-1/2 text-gray-700",
@@ -54,6 +56,7 @@ const SideMenu = () => {
         <p className="font-semibold text-lg mb-0">Utils & Hooks</p>
         {utilsPosts?.map((post) => (
           <Link
+            key={post.slug}
             href={"/" + post.slug}
             className={cn(
               "py-1 block w-1/2 text-gray-700",
