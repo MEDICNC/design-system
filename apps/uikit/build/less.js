@@ -8,6 +8,7 @@ const { rtl } = args;
 const develop = args.develop || args.debug || args.d || args.nominify;
 const sources = [
     { src: 'src/less/uikit.less', dist: `dist/css/uikit-core${rtl ? '-rtl' : ''}.css` },
+    { src: 'src/less/reset.less', dist: `dist/css/reset.css` },
     { src: 'src/less/cva.less', dist: `dist/css/cva.css` },
 ];
 
