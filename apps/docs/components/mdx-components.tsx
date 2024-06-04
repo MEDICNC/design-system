@@ -3,9 +3,9 @@ import * as runtime from "react/jsx-runtime";
 import { Preview } from "./preview";
 import { Button } from "react-uikit/button";
 import CodeTabs from "@/components/CodeTabs";
-import { TabsContent } from "react-uikit/tabs";
 import { Confirm, Alert } from "@/components/dialog";
 import { ScriptCode } from "@/components/script-code";
+import { TabsContent } from "react-uikit/tabs";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);

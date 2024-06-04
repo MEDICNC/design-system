@@ -117,11 +117,26 @@ body {
 }
 
 pre {
-  padding: 16px;
+  font-size: 14px;
+  overflow-x: auto;
+  padding: 20px 10px !important;
   margin: 12px 0;
 }
 
-pre {
-  padding: 16px;
-  margin: 12px 0;
+/* tabs */
+div[role="tablist"] {
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 0;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+button[data-state="inactive"] {
+  border-bottom: 1px solid transparent;
+}
+button[data-state="active"] {
+  border-bottom: 1px solid black;
+  border-radius: 0;
 }
