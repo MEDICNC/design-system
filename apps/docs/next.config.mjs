@@ -4,6 +4,7 @@ import { build } from "velite";
 export default {
   // othor next config here...
   output: "export",
+  images: { unoptimized: true },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

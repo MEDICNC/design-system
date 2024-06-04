@@ -5,12 +5,20 @@ date: 2024-05-29
 published: true
 ---
 
+# When??
+
+<img src="/detect-image-brightness.png" alt="" />
+이미지의 밝기에 따라 텍스트 컬러값을 적용할때 사용 <br />
+ex) 밝은배경 -> 어두운 텍스트 or 어두운배경 -> 밝은 텍스트
+
+# Info
+
 getImageBrightness 함수의 return 값으로 0 ~ 250 사이의 숫자값 받게됨. <br/>
 값이 높을수록 bright, 낮을수록 dark. <br/>
-높고 낮음의 기준치 120
+기준값은 120으로 잡으면 될거같음.
 
 ```jsx
-<img  id="target"  src='img/image.png'/>
+<img  id="target"   src='img/image.png'/>
 
 <script>
     const getImageBrightness = (base64, callback) => {
