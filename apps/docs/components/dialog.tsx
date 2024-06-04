@@ -3,7 +3,7 @@
 export const Confirm = () => {
   const handleClick = () => {
     // @ts-ignore
-    Uikit.modal
+    UIkit.modal
       .confirm({
         title: "제목",
         text: "Confirm 입니다.",
