@@ -1,7 +1,5 @@
 "use client";
 
-import Uikit from "../../uikit/dist/js/uikit-core";
-
 export const Confirm = () => {
   const handleClick = () => {
     // @ts-ignore
