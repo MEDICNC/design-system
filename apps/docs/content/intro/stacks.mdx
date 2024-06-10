@@ -4,21 +4,32 @@ title: 구성 및 주의 사항
 date: 2024-05-30
 ---
 
-# Stacks
+## Includes
 
 - jquery 3.7.1
 - [multiple-select](https://multiple-select.wenzhixin.net.cn/)
 
-# Docs 작업시 유의사항 (apps/docs)
+## Docs 수정 방법
 
-- 푸쉬 전 pnpm compile
+```jsx
+    pnpm dev      // docs 문서 실행 - localhost:3000
+    pnpm watch    // apps/uikit/src/less/**.less 파일 수정시 자동으로 compile
+    pnpm watch-js // apps/uikit/src/js/**.js 파일 수정시 자동으로 compile
+```
+
+## Docs 배포시
+
+푸쉬 전 pnpm compile 실행
+
+## Docs 작업시 유의사항 (apps/docs)
+
 - mdx 내에 script code 작성 필요 할 때
 
 ```jsx
     <ScriptCode><></><ScriptCode>
 ```
 
-# MDX
+## MDX
 
 - mdx 작성시 className으로 작성
 - attribute true 로 작성
