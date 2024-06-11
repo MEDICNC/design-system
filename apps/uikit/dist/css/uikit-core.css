@@ -862,12 +862,17 @@ button.uk-icon:not(:disabled) {
   line-height: 24px;
   letter-spacing: -0.48px;
   overflow: hidden;
+  border: 0;
+  outline: none;
 }
 .input label input:focus,
 .input label input:focus-visible,
 .input label input:active {
   border-style: solid;
   outline: none;
+}
+.input label input::placeholder {
+  color: var(--text-disabled, rgba(67, 73, 78, 0.32));
 }
 .input label .uk-btn-svg {
   display: flex;
