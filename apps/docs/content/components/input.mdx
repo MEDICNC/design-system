@@ -5,156 +5,230 @@ date: 2024-05-28
 published: true
 ---
 
-# 맨 마지막에 구조 다시 잡을 예정!
-
 # variant
 
 <Preview>
-  <div className="inline-flex flex-wrap items-center gap-3">
-    <div className="input input-enabled">
-      <input type="text" name="" id="" value="Value" />
-    </div>
-    <div className="input input-enabled ico-search">
-      <input type="text" name="" id="" value="Value" />
-    </div>
-    <div className="input input-enabled ico-image">
-      <input type="text" name="" id="" value="Value" />
-    </div>
-    <div className="input input-enabled ico-search ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-    </div>
-  </div>
-</Preview>
-
-<br />
-
-# state
-
-## default
-
-<Preview>
   <div className="inline-flex flex-wrap gap-3">
-    <div className="input input-enabled">
-      <input type="text" name="" id="" placeholder="Placeholder" />
+    <div className="input">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
     </div>
-
-[//]: # '<div className="input input-focused">'
-[//]: # '  <input type="text" name="" id="" placeholder="Placeholder" />'
-[//]: # "</div>"
-
-    <div className="input input-error">
-      <input type="text" name="" id="" placeholder="Placeholder" />
+    <div className="input error">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 24px; height: 24px;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
       <span className="help-text">help-text</span>
     </div>
-    <div className="input input-success">
-      <input type="text" name="" id="" placeholder="Placeholder" />
+    <div className="input success">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 24px; height: 24px;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: photo-200; width: 24px; height: 24px;"></i>
+        </span>
+      </label>
       <span className="help-text">help-text</span>
     </div>
-    <div className="input input-disabled">
-      <input type="text" name="" id="" placeholder="Placeholder" disabled />
+    <div className="input disabled">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </label>
     </div>
-
   </div>
 </Preview>
 
-## icon search
-
-<Preview>
-  <div className="inline-flex flex-wrap gap-3">
-    <div className="input input-enabled ico-search">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-    </div>
-
-[//]: # '<div className="input input-focused ico-search">'
-[//]: # '  <input type="text" name="" id="" placeholder="Placeholder" />'
-[//]: # "</div>"
-
-    <div className="input input-error ico-search">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-    <div className="input input-success ico-search">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-      <div className="input input-disabled ico-search">
-          <input type="text" name="" id="" placeholder="Placeholder" disabled />
-      </div>
-
-  </div>
-</Preview>
-
-## icon image
-
-<Preview>
-  <div className="inline-flex flex-wrap gap-3">
-    <div className="input input-enabled ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-    </div>
-
-[//]: # '<div className="input input-focused ico-image">'
-[//]: # '  <input type="text" name="" id="" placeholder="Placeholder" />'
-[//]: # "</div>"
-
-    <div className="input input-error ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-    <div className="input input-success ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-    <div className="input input-disabled ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" disabled />
-    </div>
-
-  </div>
-</Preview>
-
-## icon search / icon image
-
-<Preview>
-  <div className="inline-flex flex-wrap gap-3">
-    <div className="input input-enabled ico-search ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-    </div>
-
-[//]: # '<div className="input input-focused ico-search ico-image">'
-[//]: # '  <input type="text" name="" id="" placeholder="Placeholder" />'
-[//]: # "</div>"
-
-    <div className="input input-error ico-search ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-    <div className="input input-success ico-search ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" />
-      <span className="help-text">help-text</span>
-    </div>
-    <div className="input input-disabled ico-search ico-image">
-      <input type="text" name="" id="" placeholder="Placeholder" disabled />
-    </div>
-
-  </div>
-</Preview>
+```jsx
+<div className="input">
+  <label>
+    <input type="text" name="" id="" placeholder="Placeholder" />
+  </label>
+</div>
+<div className="input error">
+  <label>
+    <span className="uk-btn-svg">
+      <i uk-icon="icon: search-400; width: 24px; height: 24px;"></i>
+    </span>
+    <input type="text" name="" id="" placeholder="Placeholder" />
+  </label>
+  <span className="help-text">help-text</span>
+</div>
+<div className="input success">
+  <label>
+    <span className="uk-btn-svg">
+      <i uk-icon="icon: search-400; width: 24px; height: 24px;"></i>
+    </span>
+    <input type="text" name="" id="" placeholder="Placeholder" />
+    <span className="uk-btn-svg">
+      <i uk-icon="icon: photo-200; width: 24px; height: 24px;"></i>
+    </span>
+  </label>
+  <span className="help-text">help-text</span>
+</div>
+<div className="input disabled">
+  <label>
+    <input type="text" name="" id="" placeholder="Placeholder" disabled />
+  </label>
+</div>
+```
 
 <br />
 
 # Sizes
 
+## xl
+
 <Preview>
-  <div className="inline-flex flex-wrap items-center gap-3">
-    <div className="input input-enabled input-xl">
-      <input type="text" name="" id="" value="Value" />
+  <div className="inline-flex flex-wrap gap-3">
+    <div className="input input-xl">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
     </div>
-    <div className="input input-enabled ico-search input-lg">
-      <input type="text" name="" id="" value="Value" />
+    <div className="input error input-xl">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 28px; height: 28px; ratio: 1.1667;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+      <span className="help-text">help-text</span>
     </div>
-    <div className="input input-enabled ico-image input-md">
-      <input type="text" name="" id="" value="Value" />
+    <div className="input success input-xl">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 28px; height: 28px; ratio: 1.1667;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: photo-200; width: 28px; height: 28px; ratio: 1.1667;"></i>
+        </span>
+      </label>
+      <span className="help-text">help-text</span>
     </div>
-    <div className="input input-enabled ico-search ico-image input-sm">
-      <input type="text" name="" id="" placeholder="Placeholder" />
+    <div className="input disabled input-xl">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </label>
+    </div>
+  </div>
+</Preview>
+
+## lg
+
+<Preview>
+  <div className="inline-flex flex-wrap gap-3">
+    <div className="input input-lg">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+    </div>
+    <div className="input error input-lg">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 24px; height: 24px; ratio: 1;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input success input-lg">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 24px; height: 24px; ratio: 1;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: photo-200; width: 24px; height: 24px; ratio: 1;"></i>
+        </span>
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input disabled input-lg">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </label>
+    </div>
+  </div>
+</Preview>
+
+## md
+
+<Preview>
+  <div className="inline-flex flex-wrap gap-3">
+    <div className="input input-md">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+    </div>
+    <div className="input error input-md">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 20px; height: 20px; ratio: 0.8333;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input success input-md">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 20px; height: 20px; ratio: 0.8333;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: photo-200; width: 20px; height: 20px; ratio: 0.8333;"></i>
+        </span>
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input disabled input-md">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </label>
+    </div>
+  </div>
+</Preview>
+
+## sm
+
+<Preview>
+  <div className="inline-flex flex-wrap gap-3">
+    <div className="input input-sm">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+    </div>
+    <div className="input error input-sm">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 16px; height: 16px; ratio: 0.6667;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input success input-sm">
+      <label>
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: search-400; width: 16px; height: 16px; ratio: 0.6667;"></i>
+        </span>
+        <input type="text" name="" id="" placeholder="Placeholder" />
+        <span className="uk-btn-svg">
+          <i uk-icon="icon: photo-200; width: 16px; height: 16px; ratio: 0.6667;"></i>
+        </span>
+      </label>
+      <span className="help-text">help-text</span>
+    </div>
+    <div className="input disabled input-sm">
+      <label>
+        <input type="text" name="" id="" placeholder="Placeholder" disabled />
+      </label>
     </div>
   </div>
 </Preview>
