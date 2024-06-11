@@ -1,11 +1,11 @@
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import { Preview } from "./preview";
-import { Button } from "react-uikit/button";
 import CodeTabs from "@/components/CodeTabs";
 import { Confirm, Alert } from "@/components/dialog";
 import { ScriptCode } from "@/components/script-code";
 import { TabsContent } from "react-uikit/tabs";
+import { Button } from "react-uikit/button";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);

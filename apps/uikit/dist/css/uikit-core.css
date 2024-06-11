@@ -875,6 +875,7 @@ button.uk-icon:not(:disabled) {
   margin-right: -4px;
 }
 .input .help-text {
+  display: none;
   padding: 0 20px;
   font-size: 14px;
   line-height: 20px;
@@ -884,12 +885,14 @@ button.uk-icon:not(:disabled) {
   border: 1px solid var(--input-border-essential, #F66);
 }
 .input.error .help-text {
+  display: flex;
   color: var(--text-essential, #F66);
 }
 .input.success label {
   border: 1px solid var(--input-border-success, #00A7A7);
 }
 .input.success .help-text {
+  display: flex;
   color: var(--text-success, #00A7A7);
 }
 .input.disabled label {
