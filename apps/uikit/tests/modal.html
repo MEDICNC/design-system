@@ -469,7 +469,7 @@
                 e.preventDefault();
                 e.target.blur();
                 await modal.alert('UIkit alert!');
-                console.log('Alert closed.');
+                // console.log('Alert closed.');
             });
 
             on('#js-modal-confirm', 'click', async e => {
@@ -478,9 +478,9 @@
 
                 try {
                     await modal.confirm('UIkit confirm!');
-                    console.log('Confirmed.');
+                    // console.log('Confirmed.');
                 } catch (e) {
-                    console.log('Rejected.')
+                    // console.log('Rejected.')
                 }
             });
 
@@ -488,7 +488,7 @@
                 e.preventDefault();
                 e.target.blur();
                 const name = await modal.prompt('Name:', 'Your name');
-                console.log('Prompted:', name);
+                // console.log('Prompted:', name);
             });
 
           </script>

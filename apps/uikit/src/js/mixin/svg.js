@@ -14,7 +14,7 @@ export default {
     },
 
     connected() {
-        console.log('this', this);
+        // console.log('this', this);
         this.svg = this.getSvg().then((el) => {
             if (!this._connected) {
                 return;
@@ -82,8 +82,8 @@ function applyWidthAndHeight(el, ref) {
     if (viewBox && !dimensions.some((val) => val)) {
         dimensions = viewBox.split(' ').slice(2);
     }
-    console.log('thisthis', this);
-    console.log('dimensions', dimensions);
-    console.log('this.width', this.width);
+    // console.log('thisthis', this);
+    // console.log('dimensions', dimensions);
+    // console.log('this.width', this.width);
     dimensions.forEach((val, i) => attr(el, props[i], toFloat(val) * this.ratio || null));
 }

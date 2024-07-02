@@ -3,17 +3,17 @@ import inquirer from 'inquirer';
 import { args, read, replaceInFile, validClassName } from './util.js';
 
 if (args.h || args.help) {
-    console.log(`
-        usage:
-
-        prefix.js [-p{refix}=prefix] [-s{ource}=folder to replace prefix in]
-
-        example:
-
-        prefix.js // will prompt for a prefix to replace the current one with
-        prefix.js -p=xyz // will replace any existing prefix with xyz
-
-    `);
+    // console.log(`
+    //     usage:
+    //
+    //     prefix.js [-p{refix}=prefix] [-s{ource}=folder to replace prefix in]
+    //
+    //     example:
+    //
+    //     prefix.js // will prompt for a prefix to replace the current one with
+    //     prefix.js -p=xyz // will replace any existing prefix with xyz
+    //
+    // `);
     process.exit(0);
 }
 

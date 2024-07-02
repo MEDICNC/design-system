@@ -3,18 +3,18 @@ import stripCssComments from 'strip-css-comments';
 import { args, minify, read, renderLess, replaceInFile, validClassName } from './util.js';
 
 if (args.h || args.help) {
-    console.log(`
-        usage:
-
-        scope.js [-s{cope}=your_great_new_scope_name][cleanup]
-
-        example:
-
-        scope.js // will scope with uk-scope
-        scope.js -s "my-scope" // will replace any existing scope with my-scope
-        scope.js cleanup // will remove current scope
-
-    `);
+    // console.log(`
+    //     usage:
+    //
+    //     scope.js [-s{cope}=your_great_new_scope_name][cleanup]
+    //
+    //     example:
+    //
+    //     scope.js // will scope with uk-scope
+    //     scope.js -s "my-scope" // will replace any existing scope with my-scope
+    //     scope.js cleanup // will remove current scope
+    //
+    // `);
     process.exit(0);
 }
 const currentScopeRe = /\/\* scoped: ([^*]*) \*\/\n/;
