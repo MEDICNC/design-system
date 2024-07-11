@@ -1582,7 +1582,7 @@ button.uk-icon:not(:disabled) {
 .select-btn.active {
   border: 1px solid var(--input-border-active, #2194F3);
 }
-.select-btn.active ::after {
+.select-btn.active::after {
   transform: rotate(180deg);
 }
 .select {

@@ -7,31 +7,27 @@ published: true
 
 # Example
 
-CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.less
+### CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.less
 
+<br />
 <Preview>
   <div className="select-box">
-    <button
-      type="button"
-      data-val="전체"
-      className="select-btn"
-      onClick="selectBtnClick(this);"
-    >
+    <button type="button" data-val="전체" className="select-btn">
       전체
     </button>
     <ul className="select select-sm">
       <li>
-        <button type="button" data-value="January">
+        <button type="button" data-val="January">
           January
         </button>
       </li>
       <li>
-        <button type="button" data-value="December">
+        <button type="button" data-val="December">
           December
         </button>
       </li>
       <li>
-        <button type="button" data-value="March">
+        <button type="button" data-val="March">
           March
         </button>
       </li>
@@ -46,22 +42,52 @@ CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.le
   </button>
   <ul className="select select-sm" style="display: none;">
     <li>
-      <button type="button" data-value="January">
+      <button type="button" data-val="January">
         January
       </button>
     </li>
     <li>
-      <button type="button" data-value="December">
+      <button type="button" data-val="December">
         December
       </button>
     </li>
     <li>
-      <button type="button" data-value="March">
+      <button type="button" data-val="March">
         March
       </button>
     </li>
   </ul>
 </div>
+
+<script>
+    // next.js에서 스크립트 작성이 components 형태로 되어있는데
+    // button에 onclick을 어떻게 잡아야 할지 찾아봐야 합니다.
+    // 우선은 querySelectorAll로 타겟 잡은 후 each문 돌려서 스크립트 작성 함.
+    // button에 onclick을 넣을 수 있다면 굳이 each문 필요없음.
+
+    const selectBtn = document.querySelectorAll('.select-btn');
+    selectBtn.forEach((node) => {
+        node.addEventListener('click', function() {
+            let result = node.dataset.val;
+
+            if($(node).is('.active')){
+                $(node).removeClass('active').next().slideUp();
+            }else{
+                $(node).addClass('active').next().slideDown();
+            }
+        });
+    });
+
+    const selectOptionBtn = document.querySelectorAll('.select button');
+    selectOptionBtn.forEach((node) => {
+        node.addEventListener('click', function() {
+            let result = node.dataset.val;
+
+            $(node).parents('.select').slideUp().prev('.select-btn').html(result).attr('data-val',result).removeClass('active');
+            $(node).parent().addClass('active').siblings().removeClass('active');
+        });
+    });
+</script>
 ```
 
 # Size
@@ -75,17 +101,17 @@ CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.le
     </button>
     <ul className="select">
       <li>
-        <button type="button" data-value="January">
+        <button type="button" data-val="January">
           January
         </button>
       </li>
       <li>
-        <button type="button" data-value="December">
+        <button type="button" data-val="December">
           December
         </button>
       </li>
       <li>
-        <button type="button" data-value="March">
+        <button type="button" data-val="March">
           March
         </button>
       </li>
@@ -107,17 +133,17 @@ CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.le
     </button>
     <ul className="select">
       <li>
-        <button type="button" data-value="January">
+        <button type="button" data-val="January">
           January
         </button>
       </li>
       <li>
-        <button type="button" data-value="December">
+        <button type="button" data-val="December">
           December
         </button>
       </li>
       <li>
-        <button type="button" data-value="March">
+        <button type="button" data-val="March">
           March
         </button>
       </li>
@@ -129,10 +155,29 @@ CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.le
 <div className="select-box select-sm">... ... ...</div>
 ```
 
-<ScriptCode>
-    <>
-      cont selectBtnClick((target) => {
-        console.log(target);
-      });
-    </>
-</ScriptCode>
+<ScriptCode>{`
+
+    const selectBtn = document.querySelectorAll('.select-btn');
+    selectBtn.forEach((node) => {
+        node.addEventListener('click', function() {
+            let result = node.dataset.val;
+
+            if($(node).is('.active')){
+                $(node).removeClass('active').next().slideUp();
+            }else{
+                $(node).addClass('active').next().slideDown();
+            }
+        });
+    });
+
+    const selectOptionBtn = document.querySelectorAll('.select button');
+    selectOptionBtn.forEach((node) => {
+        node.addEventListener('click', function() {
+            let result = node.dataset.val;
+
+            $(node).parents('.select').slideUp().prev('.select-btn').html(result).attr('data-val',result).removeClass('active');
+            $(node).parent().addClass('active').siblings().removeClass('active');
+        });
+    });
+
+`}</ScriptCode>

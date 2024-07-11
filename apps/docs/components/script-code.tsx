@@ -2,12 +2,16 @@ import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 import Script from "next/script";
 
-interface CalloutProps {
+interface ScriptCodeProps {
   children?: ReactNode;
 }
 
-export function ScriptCode({ children }: CalloutProps) {
+export function ScriptCode({ children }: ScriptCodeProps) {
   return (
-      <Script>{children}</Script>
+    <Script
+      dangerouslySetInnerHTML={{
+        __html: typeof children === "string" ? children : "",
+      }}
+    />
   );
 }
