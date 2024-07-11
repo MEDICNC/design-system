@@ -14,23 +14,23 @@ const buildAll =
         .length;
 
 if (args.h || args.help) {
-    console.log(`
-        usage:
-
-        build.js [componentA, componentB, ...] [-d|debug|nominify|watch]
-
-        examples:
-
-        build.js // builds all of uikit, including icons, components and does minification (implies 'all')
-        build.js uikit icons -d // builds uikit and the icons, skipping the minification and components
-        build.js core lightbox -d // builds uikit-core and the lightbox, skipping the minification
-
-        available components:
-
-        bundles: ${Object.keys(bundles).join(', ')}
-        components: ${Object.keys(components).join(', ')}
-
-    `);
+    // console.log(`
+    //     usage:
+    //
+    //     build.js [componentA, componentB, ...] [-d|debug|nominify|watch]
+    //
+    //     examples:
+    //
+    //     build.js // builds all of uikit, including icons, components and does minification (implies 'all')
+    //     build.js uikit icons -d // builds uikit and the icons, skipping the minification and components
+    //     build.js core lightbox -d // builds uikit-core and the lightbox, skipping the minification
+    //
+    //     available components:
+    //
+    //     bundles: ${Object.keys(bundles).join(', ')}
+    //     components: ${Object.keys(components).join(', ')}
+    //
+    // `);
     process.exit(0);
 }
 

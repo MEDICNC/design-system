@@ -39,7 +39,7 @@ export async function write(dest, data) {
 
 export async function logFile(file) {
     const { size } = await fs.stat(file);
-    console.log(`${cyan(file)} ${formatSize(size)}`);
+    // console.log(`${cyan(file)} ${formatSize(size)}`);
 }
 
 export async function minify(file) {
@@ -146,7 +146,7 @@ export async function compile(file, dest, { external, globals, name, aliases, re
 
         await bundle.close();
     } else {
-        console.log('UIkit is watching the files...');
+        // console.log('UIkit is watching the files...');
 
         const watcher = rollupWatch({
             ...inputOptions,

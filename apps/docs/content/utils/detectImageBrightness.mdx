@@ -72,7 +72,9 @@ getImageBrightness 함수의 return 값으로 0 ~ 250 사이의 숫자값 받게
     };
 
     toDataURL( target.src, function(dataUrl) {
-      getImageBrightness(dataUrl, (result)=> console.log(result))
+      getImageBrightness(dataUrl, (result) => {
+          // console.log(result)
+      })
     })
 </script>
 ```
