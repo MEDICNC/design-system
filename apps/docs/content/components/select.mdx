@@ -180,4 +180,13 @@ published: true
         });
     });
 
+    document.addEventListener('click', function(e) {
+        const $target = $(e.target);
+
+        if (!$target.closest('.select-btn').length) {
+            $('.select-btn, .select button').removeClass('active');
+            $('.select').slideUp();
+        }
+    });
+
 `}</ScriptCode>
