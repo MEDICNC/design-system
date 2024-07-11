@@ -1542,6 +1542,114 @@ button.uk-icon:not(:disabled) {
  * multiple select cdn 가져와 커스텀
  * <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.css">
  */
+.select-box {
+  position: relative;
+}
+.select-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 160px;
+  min-height: 24px;
+  padding: 6px 32px 6px 12px;
+  color: var(--text-default, #1A1A1A);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.42px;
+  text-align: left;
+  text-decoration: none;
+  border-radius: var(--radius-md, 4px);
+  border: 1px solid var(--input-border-enabled, rgba(67, 73, 78, 0.24));
+  background: var(--button-default, #FFF);
+  cursor: pointer;
+}
+.select-btn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 1px;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><mask id="mask0_2758_1016" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><rect width="20" height="20" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_2758_1016)"><path d="M9.99999 11.9231L6.8269 8.75H13.1731L9.99999 11.9231Z" fill="%231A1A1A"/></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transform: rotate(0deg);
+}
+.select-btn.active {
+  border: 1px solid var(--input-border-active, #2194F3);
+}
+.select-btn.active ::after {
+  transform: rotate(180deg);
+}
+.select {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  min-width: 160px;
+  padding: 8px 0;
+  border-radius: var(--radius-md, 4px);
+  border: 1px solid var(--input-border-enabled, rgba(67, 73, 78, 0.24));
+  background: var(--button-default, #FFF);
+  z-index: 1;
+}
+.select li {
+  width: 100%;
+}
+.select li button {
+  width: 100%;
+  padding: 6px 12px;
+  color: var(--text-default, #1A1A1A);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.42px;
+  text-align: left;
+  text-decoration: none;
+}
+.select li:not(.active):hover button {
+  background-color: #f8f9fa;
+}
+.select li.active button {
+  color: #fff;
+  background: var(--surface-primary, #2194f3);
+}
+.select-md .select-btn {
+  padding: 6px 32px 6px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.42px;
+}
+.select-md .select {
+  top: 36px;
+}
+.select-sm .select-btn {
+  padding: 4px 22px 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  /* 133.333% */
+  letter-spacing: -0.36px;
+}
+.select-sm .select-btn::after {
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><mask id="mask0_2758_1002" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><rect width="16" height="16" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_2758_1002)"><path d="M7.99995 9.53847L5.46149 7H10.5384L7.99995 9.53847Z" fill="%231A1A1A"/></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transform: rotate(0deg);
+}
+.select-sm .select {
+  top: 28px;
+}
 .ms-offscreen {
   clip: rect(0 0 0 0) !important;
   width: 1px !important;

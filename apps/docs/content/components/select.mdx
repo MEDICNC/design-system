@@ -1,59 +1,138 @@
 ---
 componentName: Select
 title: Select
-date: 2024-05-29
+date: 2024-07-10
 published: true
 ---
 
-# Library
-
-multiple select 사용
-
-api 참조 https://multiple-select.wenzhixin.net.cn/docs/en/options
-
 # Example
 
+CSS 경로 : C:\workspace\design-system\apps\uikit\src\less\components\select.less
+
 <Preview>
-  <select>
-    <option value="1">January</option>
-    <option value="2">December</option>
-    <option value="3">March</option>
-  </select>
+  <div className="select-box">
+    <button
+      type="button"
+      data-val="전체"
+      className="select-btn"
+      onClick="selectBtnClick(this);"
+    >
+      전체
+    </button>
+    <ul className="select select-sm">
+      <li>
+        <button type="button" data-value="January">
+          January
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="December">
+          December
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="March">
+          March
+        </button>
+      </li>
+    </ul>
+  </div>
 </Preview>
 
 ```jsx
-<select>
-  <option value="1">January</option>
-  <option value="2">December</option>
-  <option value="3">March</option>
-</select>
+<div className="select-box">
+  <button type="button" data-val="전체" className="select-btn">
+    전체
+  </button>
+  <ul className="select select-sm" style="display: none;">
+    <li>
+      <button type="button" data-value="January">
+        January
+      </button>
+    </li>
+    <li>
+      <button type="button" data-value="December">
+        December
+      </button>
+    </li>
+    <li>
+      <button type="button" data-value="March">
+        March
+      </button>
+    </li>
+  </ul>
+</div>
 ```
 
-# sm size
+# Size
+
+## md
 
 <Preview>
-  <select className="select-sm">
-    <option value="1">January</option>
-    <option value="2">December</option>
-    <option value="3">March</option>
-  </select>
+  <div className="select-box select-md">
+    <button type="button" data-val="전체" className="select-btn">
+      전체
+    </button>
+    <ul className="select">
+      <li>
+        <button type="button" data-value="January">
+          January
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="December">
+          December
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="March">
+          March
+        </button>
+      </li>
+    </ul>
+  </div>
 </Preview>
 
 ```jsx
-<select class="select-sm">
-  <option value="1">January</option>
-  <option value="2">December</option>
-  <option value="3">March</option>
-</select>
+<div className="select-box select-md">... ... ...</div>
 ```
 
-# width 유의사항
+<br />
+## sm
 
--디자인 팀 전달사항
+<Preview>
+  <div className="select-box select-sm">
+    <button type="button" data-val="전체" className="select-btn">
+      전체
+    </button>
+    <ul className="select">
+      <li>
+        <button type="button" data-value="January">
+          January
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="December">
+          December
+        </button>
+      </li>
+      <li>
+        <button type="button" data-value="March">
+          March
+        </button>
+      </li>
+    </ul>
+  </div>
+</Preview>
 
-옵션들 중 가장 큰 text 길이에 맞춰 select button width 설정하기.
-(multiple select에서 계산 해줌)
+```jsx
+<div className="select-box select-sm">... ... ...</div>
+```
 
 <ScriptCode>
-  <>$('select').multipleSelect()</>
+    <>
+      cont selectBtnClick((target) => {
+        console.log(target);
+      });
+    </>
 </ScriptCode>
