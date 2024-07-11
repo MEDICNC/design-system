@@ -157,6 +157,7 @@ published: true
 
 <ScriptCode>{`
 
+    // selectbox 버튼 클릭
     const selectBtn = document.querySelectorAll('.select-btn');
     selectBtn.forEach((node) => {
         node.addEventListener('click', function() {
@@ -170,6 +171,7 @@ published: true
         });
     });
 
+    // selectbox 오픈
     const selectOptionBtn = document.querySelectorAll('.select button');
     selectOptionBtn.forEach((node) => {
         node.addEventListener('click', function() {
@@ -180,6 +182,7 @@ published: true
         });
     });
 
+    // selectbox 외 문서 클릭 시
     document.addEventListener('click', function(e) {
         const $target = $(e.target);
 
