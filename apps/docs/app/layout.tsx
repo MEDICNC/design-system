@@ -47,7 +47,7 @@ export default function RootLayout({
           <div className="container max-w-screen-xl flex flex-auto">
             <div className="flex w-full">
               <aside className="py-6 lg:py-10 w-[20%]">
-                <div className="flex flex-col">
+                <div className="flex flex-col sticky top-[97px]">
                   <SideMenu />
                 </div>
               </aside>
