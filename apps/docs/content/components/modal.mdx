@@ -1,16 +1,12 @@
 ---
 componentName: Modal
 title: Modal
-date: 2024-05-23
+date: 2024-07-12
 published: true
 ---
 
 <Preview>
-  <button
-    type="button"
-    className="uk-btn uk-btn-primary"
-    uk-toggle="target: #my-id"
-  >
+  <button type="button" className="uk-btn uk-btn-primary btn-modal">
     토글 버튼
   </button>
   <div id="my-id" uk-modal="true">
@@ -31,43 +27,48 @@ published: true
 </Preview>
 
 ```jsx
-<button type="button" className="btn btn-primary" uk-toggle="target: #my-id">토글 버튼</button>
-
-<div id="my-id" uk-modal="true">
+  <button type="button" className="uk-btn uk-btn-primary btn-modal">
+    토글 버튼
+  </button>
+  <div id="my-id" uk-modal="true">
     <div className="uk-modal-dialog">
-        <div className="uk-modal-header">
-            <p className="uk-modal-title">
-                모달 타이틀
-            </p>
-        </div>
-        <div className="uk-modal-body">
-            모달 바디
-        </div>
-        <div className="uk-modal-footer">
-            <button className="uk-btn uk-btn-tonal btn-dark">취소</button>
-            <button className="uk-btn uk-btn-primary btn-lg">확인</button>
-        </div>
+      <div className="uk-modal-header">
+        <p className="uk-modal-title">모달 타이틀</p>
+      </div>
+      <div className="uk-modal-body">모달 바디</div>
+      <div className="uk-modal-footer">
+        <button className="uk-btn uk-btn-tonal btn-dark">취소</button>
+        <button className="uk-btn uk-btn-primary btn-lg">확인</button>
+      </div>
       <button className="uk-modal-close btn-icon" type="button">
-          <i uk-icon="icon: close-200; ratio:1.33334" className="text-subtle"></i>
+        <i uk-icon="icon: close-200; ratio:1.33334" className="text-subtle"></i>
       </button>
     </div>
-</div>
+  </div>
+
+  <script>
+    const modalOpenBtn = document.querySelector('.btn-modal');
+    modalOpenBtn.addEventListener('click',function(){
+        console.log('')
+        if($('#my-id').is('.uk-open')){
+            $('#my-id').removeClass('uk-open').hide();
+        }else{
+            $('#my-id').addClass('uk-open').css('display', 'flex').show();
+        }
+    });
+  </script>
 ```
 
-# Methods
+<ScriptCode>{`
 
-show
+    const modalOpenBtn = document.querySelector('.btn-modal');
+    modalOpenBtn.addEventListener('click',function(){
+        console.log('')
+        if($('#my-id').is('.uk-open')){
+            $('#my-id').removeClass('uk-open').hide();
+        }else{
+            $('#my-id').addClass('uk-open').css('display', 'flex').show();
+        }
+    });
 
-```jsx
-UIkit.modal("#my-id").show();
-```
-
-hide
-
-```jsx
-UIkit.modal("#my-id").hide();
-```
-
-# UX Rule
-
-모달 backdrop 영역 클릭시 닫기 안되게
+`}</ScriptCode>
