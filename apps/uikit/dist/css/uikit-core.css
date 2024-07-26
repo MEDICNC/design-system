@@ -524,7 +524,7 @@ button.uk-icon:not(:disabled) {
   position: relative;
   display: inline-flex;
   align-items: center;
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -679,7 +679,7 @@ button.uk-icon:not(:disabled) {
   position: relative;
   display: inline-flex;
   align-items: center;
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -855,7 +855,7 @@ button.uk-icon:not(:disabled) {
   cursor: default;
 }
 .input label input {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1033,7 +1033,7 @@ button.uk-icon:not(:disabled) {
   border: 1px solid var(--input-border-enabled, rgba(67, 73, 78, 0.24));
   background: var(--input-background-enabled, #FFF);
   resize: none;
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Body/xl 20px/400 */
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 20px;
@@ -1201,7 +1201,7 @@ button.uk-icon:not(:disabled) {
 }
 .uk-btn-light path,
 .uk-btn-light rect {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-primary {
   /* @v color="primary" */
@@ -1243,7 +1243,7 @@ button.uk-icon:not(:disabled) {
 .uk-btn.uk-btn-fill.uk-btn-light {
   /* @v color="light" */
   background: var(--button-light-background-fill-enabled, #FFF);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-fill.uk-btn-light:hover {
   background: var(--button-light-background-fill-hover, #F2F2F2);
@@ -1294,7 +1294,7 @@ button.uk-icon:not(:disabled) {
 .uk-btn.uk-btn-tonal.uk-btn-dark {
   /* @v color="dark" */
   background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-tonal.uk-btn-dark:hover {
   background: var(--button-secondary-background-tonal-hover, rgba(67, 73, 78, 0.12));
@@ -1302,7 +1302,7 @@ button.uk-icon:not(:disabled) {
 .uk-btn.uk-btn-tonal.uk-btn-light {
   /* @v color="light" */
   background: var(--button-light-background-tonal-enabled, rgba(255, 255, 255, 0.06));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-tonal.uk-btn-light:hover {
   background: var(--button-light-background-tonal-hover, rgba(255, 255, 255, 0.12));
@@ -1354,7 +1354,7 @@ button.uk-icon:not(:disabled) {
 .uk-btn.uk-btn-outline.uk-btn-dark {
   /* @v color="dark" */
   border: 1px solid var(--button-dark-border-enabled, #2F3337);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-outline.uk-btn-dark:hover {
   border: 1px solid var(--button-dark-border-hover, #000);
@@ -1362,7 +1362,7 @@ button.uk-icon:not(:disabled) {
 .uk-btn.uk-btn-outline.uk-btn-light {
   /* @v color="light" */
   border: 1px solid var(--button-light-border-enabled, rgba(0, 0, 0, 0.12));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-outline.uk-btn-light:hover {
   border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
@@ -1411,14 +1411,14 @@ button.uk-icon:not(:disabled) {
 }
 .uk-btn.uk-btn-text.uk-btn-dark {
   /* @v color="dark" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-text.uk-btn-dark:hover {
   background: var(--button-dark-background-tonal-hover, rgba(0, 0, 0, 0.12));
 }
 .uk-btn.uk-btn-text.uk-btn-light {
   /* @v color="light" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-text.uk-btn-essential {
   /* @v color="essential" */
@@ -1459,11 +1459,11 @@ button.uk-icon:not(:disabled) {
 }
 .uk-btn.uk-btn-link.uk-btn-dark {
   /* @v color="dark" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-link.uk-btn-light {
   /* @v color="light" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-link.uk-btn-essential {
   /* @v color="essential" */
@@ -1963,7 +1963,7 @@ button.uk-icon:not(:disabled) {
 .uk-badge.uk-badge-basic.uk-badge-light,
 .uk-badge.uk-badge-pill.uk-badge-light {
   background: var(--button-default, #FFF);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-badge.uk-badge-basic.uk-badge-tonal,
 .uk-badge.uk-badge-pill.uk-badge-tonal {
@@ -2036,7 +2036,7 @@ button.uk-icon:not(:disabled) {
 }
 .uk-badge-icon.uk-badge-light {
   background: var(--button-default, #FFF);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-badge-icon.uk-badge-tonal {
   background: var(--button-secondary-background-tonal-enabled, rgba(67, 73, 78, 0.06));
@@ -2343,7 +2343,7 @@ button.uk-icon:not(:disabled) {
   min-width: 32px;
   height: 32px;
   border-radius: var(--radius-md, 4px);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   font-size: 14px;
   text-decoration: none;
   cursor: pointer;
@@ -2493,7 +2493,7 @@ button.uk-icon:not(:disabled) {
   background: var(--button-primary-background-fill-enabled, #2194F3);
 }
 .display-lg {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Display/lg 57/400 */
   font-family: var(--font-family-font-family-display, SUIT), sans-serif;
   font-size: 57px;
@@ -2503,7 +2503,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -1.71px;
 }
 .display-md {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Display/md 45/400 */
   font-family: var(--font-family-font-family-display, SUIT), sans-serif;
   font-size: 45px;
@@ -2513,7 +2513,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -1.35px;
 }
 .display-sm {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Display/sm 36/400 */
   font-family: var(--font-family-font-family-display, SUIT), sans-serif;
   font-size: 36px;
@@ -2523,7 +2523,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -1.08px;
 }
 .headline-lg {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Headline/lg 32/400 */
   font-family: var(--font-family-font-family-headline, SUIT), sans-serif;
   font-size: 32px;
@@ -2533,7 +2533,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.96px;
 }
 .headline-md {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Headline/md 28/400 */
   font-family: var(--font-family-font-family-headline, SUIT), sans-serif;
   font-size: 28px;
@@ -2543,7 +2543,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.84px;
 }
 .headline-sm {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Headline/sm 24/400 */
   font-family: var(--font-family-font-family-headline, SUIT), sans-serif;
   font-size: 24px;
@@ -2553,7 +2553,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.72px;
 }
 .body-xl {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Body/xl 20px/400 */
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 20px;
@@ -2563,7 +2563,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.6px;
 }
 .body-lg {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Body/lg 16px/400 */
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 16px;
@@ -2573,7 +2573,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.48px;
 }
 .body-md {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Body/md 14px/400 */
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 14px;
@@ -2583,7 +2583,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.42px;
 }
 .body-sm {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Body/sm 12px/400 */
   font-family: var(--font-family-font-family-body, SUIT), sans-serif;
   font-size: 12px;
@@ -2593,7 +2593,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.36px;
 }
 .label-md {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Label/md 14px */
   font-family: var(--font-family-font-family-label, SUIT), sans-serif;
   font-size: 14px;
@@ -2603,7 +2603,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.42px;
 }
 .label-sm {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Label/sm 12px */
   font-family: var(--font-family-font-family-label, SUIT), sans-serif;
   font-size: 12px;
@@ -2613,7 +2613,7 @@ button.uk-icon:not(:disabled) {
   letter-spacing: -0.36px;
 }
 .label-xs {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
   /* Label/xs 10px */
   font-family: var(--font-family-font-family-label, SUIT), sans-serif;
   font-size: 10px;

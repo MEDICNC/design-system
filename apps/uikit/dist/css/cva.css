@@ -102,7 +102,7 @@
 }
 .uk-btn-light path,
 .uk-btn-light rect {
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-primary {
   /* @v color="primary" */
@@ -144,7 +144,7 @@
 .uk-btn.uk-btn-fill.uk-btn-light {
   /* @v color="light" */
   background: var(--button-light-background-fill-enabled, #FFF);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-fill.uk-btn-light:hover {
   background: var(--button-light-background-fill-hover, #F2F2F2);
@@ -195,7 +195,7 @@
 .uk-btn.uk-btn-tonal.uk-btn-dark {
   /* @v color="dark" */
   background: var(--button-dark-background-tonal-enabled, rgba(0, 0, 0, 0.06));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-tonal.uk-btn-dark:hover {
   background: var(--button-secondary-background-tonal-hover, rgba(67, 73, 78, 0.12));
@@ -203,7 +203,7 @@
 .uk-btn.uk-btn-tonal.uk-btn-light {
   /* @v color="light" */
   background: var(--button-light-background-tonal-enabled, rgba(255, 255, 255, 0.06));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-tonal.uk-btn-light:hover {
   background: var(--button-light-background-tonal-hover, rgba(255, 255, 255, 0.12));
@@ -255,7 +255,7 @@
 .uk-btn.uk-btn-outline.uk-btn-dark {
   /* @v color="dark" */
   border: 1px solid var(--button-dark-border-enabled, #2F3337);
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-outline.uk-btn-dark:hover {
   border: 1px solid var(--button-dark-border-hover, #000);
@@ -263,7 +263,7 @@
 .uk-btn.uk-btn-outline.uk-btn-light {
   /* @v color="light" */
   border: 1px solid var(--button-light-border-enabled, rgba(0, 0, 0, 0.12));
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-outline.uk-btn-light:hover {
   border: 1px solid var(--button-light-border-hover, rgba(0, 0, 0, 0.32));
@@ -312,14 +312,14 @@
 }
 .uk-btn.uk-btn-text.uk-btn-dark {
   /* @v color="dark" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-text.uk-btn-dark:hover {
   background: var(--button-dark-background-tonal-hover, rgba(0, 0, 0, 0.12));
 }
 .uk-btn.uk-btn-text.uk-btn-light {
   /* @v color="light" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-text.uk-btn-essential {
   /* @v color="essential" */
@@ -360,11 +360,11 @@
 }
 .uk-btn.uk-btn-link.uk-btn-dark {
   /* @v color="dark" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-link.uk-btn-light {
   /* @v color="light" */
-  color: var(--text-default, #000);
+  color: var(--text-default, #1a1a1a);
 }
 .uk-btn.uk-btn-link.uk-btn-essential {
   /* @v color="essential" */
