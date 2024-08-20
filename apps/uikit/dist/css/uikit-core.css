@@ -1882,19 +1882,19 @@ button.uk-icon:not(:disabled) {
   overflow-x: auto;
   white-space: nowrap;
 }
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--Medigate-theme-neutral-variant-neutral-variant100, #F1F4F8);
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #C2C7CC;
-  border-radius: 3px;
-}
+/*::-webkit-scrollbar {*/
+/*  width: 6px;*/
+/*  height: 6px;*/
+/*}*/
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*  background: var(--Medigate-theme-neutral-variant-neutral-variant100, #F1F4F8);*/
+/*}*/
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*  background: #C2C7CC;*/
+/*  border-radius: 3px;*/
+/*}*/
 .uk-scroll-transparent::-webkit-scrollbar-track {
   background: transparent;
 }
